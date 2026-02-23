@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- =========================
+       공통 스타일 (수정 금지)
+       - 사이드바
+       - 배경색
+       - 전체 비율
+       - 폰트 / 버튼 규격
+  ========================= -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+
+  <title>DAP - Data Access Platform</title>
+</head>
+<body>
+<!-- =================================================
+     [공통] 전체 화면 기준 뷰포트 (수정 금지)
+================================================== -->
+<div id="viewport">
+
+  <!-- =================================================
+       [공통] 기준 해상도 스케일 래퍼 (수정 금지)
+       - 기준 해상도: 1440 x 900
+       - 화면 크기에 따라 자동 scale
+  ================================================= -->
+  <div id="scale-wrapper">
+
+    <!-- =================================================
+         [공통] 앱 전체 레이아웃 (수정 금지)
+         - 좌측 사이드바
+         - 우측 메인 영역
+    ================================================= -->
+    <div class="app-container">
+
+      <!-- =====================
+           [공통] 사이드바 (수정 금지)
+           - 로고
+           - 메뉴
+           - 최근 기록
+           - 사용자 정보
+      ====================== -->
+
+      <main class="main-content">
+        <div class="center-area">
+          
+          <div class="fav-header">
+            <h1 class="page-title">즐겨찾기</h1>
+            <div class="header-actions">
+              <button class="action-btn" onclick="toggleAllByButton()">
+                <img 
+                  src="https://img.icons8.com/?size=100&id=924&format=png&color=000000" 
+                  alt="check" 
+                  style="width: 14px; height: 14px;" 
+                />
+                전체 선택
+              </button>
+
+              <button class="action-btn delete">
+                <img 
+                  src="https://img.icons8.com/?size=100&id=PziI2kHf4XFz&format=png&color=000000" 
+                  alt="delete" 
+                  style="width: 14px; height: 14px;" 
+                />
+                삭제
+              </button>
+            </div>
+          </div>
+
+          <div class="fav-container">
+            <table class="fav-table">
+              <thead>
+                <tr>
+                  <th class="col-check">
+                    <input type="checkbox" id="check-all" onchange="toggleAll(this.checked)" />
+                  </th> 
+                  <th class="col-content">질의 내용</th>
+                  <th class="col-date">실행 시간</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td class="col-check"><input type="checkbox" /></td>
+                  <td class="col-content">
+                    <div class="content-wrapper">
+                      <span>List all patients with HbA1c > 7.0 in the last 6 months</span>
+                    </div>
+                  </td>
+                  <td class="col-date">2023-10-24 14:20</td>
+                </tr>
+                <tr>
+                  <td class="col-check"><input type="checkbox" /></td>
+                  <td class="col-content">
+                    <div class="content-wrapper">
+                      <span>Count of emergency admissions by department</span>
+                    </div>
+                  </td>
+                  <td class="col-date">2023-10-24 11:05</td>
+                </tr>
+                <tr>
+                  <td class="col-check"><input type="checkbox" /></td>
+                  <td class="col-content">
+                    <div class="content-wrapper">
+                      <span>Show average stay duration for cardiology patients</span>
+                    </div>
+                  </td>
+                  <td class="col-date">2023-10-23 16:45</td>
+                </tr>
+                <tr>
+                  <td class="col-check"><input type="checkbox" /></td>
+                  <td class="col-content">
+                    <div class="content-wrapper">
+                      <span>Total medication costs for diabetic patients in Q3</span>
+                    </div>
+                  </td>
+                  <td class="col-date">2023-10-23 09:12</td>
+                </tr>
+                <tr>
+                  <td class="col-check"><input type="checkbox" /></td>
+                  <td class="col-content">
+                    <div class="content-wrapper">
+                      <span>Retrieve pharmacy logs for controlled substances by doctor ID 882</span>
+                    </div>
+                  </td>
+                  <td class="col-date">2023-10-22 18:01</td>
+                </tr>
+                <tr>
+                  <td class="col-check"><input type="checkbox" /></td>
+                  <td class="col-content">
+                    <div class="content-wrapper">
+                      <span>Retrieve pharmacy logs for controlled substances by doctor ID 882</span>
+                    </div>
+                  </td>
+                  <td class="col-date">2023-10-22 18:01</td>
+                </tr>
+                 <tr>
+                    <td class="col-check"><input type="checkbox" /></td>
+                    <td class="col-content">
+                      <div class="content-wrapper">
+                        <span>Retrieve pharmacy logs for controlled substances by doctor ID 882</span>
+                      </div>
+                    </td>
+                    <td class="col-date">2023-10-22 18:01</td>
+                  </tr>
+              </tbody>
+            </table>
+
+            <div class="pagination-footer">
+              <div class="page-info">전체 128건 중 1-10건 표시</div>
+              <div class="pagination-controls">
+                <button class="page-btn prev"><</button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn next">></button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </main>
+
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

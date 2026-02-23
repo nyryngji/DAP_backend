@@ -1,0 +1,2529 @@
+[
+  {
+    "canonical": "Acceptable pain level status",
+    "aliases": [
+      "Acceptable pain level status",
+      "Pain Level Acceptable"
+    ],
+    "domain": "Observation",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        223794
+      ]
+    },
+    "unit": null,
+    "concept_id": "4138763",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Airway pressure Ventilator --at peak inspiratory flow maximum setting",
+    "aliases": [
+      "Airway pressure Ventilator --at peak inspiratory flow maximum setting",
+      "Paw High"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        223873
+      ]
+    },
+    "unit": null,
+    "concept_id": "3025439",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Alcohol abuse",
+    "aliases": [
+      "Alcohol abuse",
+      "ETOH"
+    ],
+    "domain": "Condition",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225106
+      ]
+    },
+    "unit": null,
+    "concept_id": "433753",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Anion gap in Blood",
+    "aliases": [
+      "Anion gap in Blood",
+      "Anion gap"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        227073
+      ]
+    },
+    "unit": null,
+    "concept_id": "3039000",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Apnea interval Ventilator alarm",
+    "aliases": [
+      "Apnea interval Ventilator alarm",
+      "Apnea Interval"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        223876
+      ]
+    },
+    "unit": null,
+    "concept_id": "40762903",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Appearance of Urine",
+    "aliases": [
+      "Appearance of Urine",
+      "Urine Appearance"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224876
+      ]
+    },
+    "unit": null,
+    "concept_id": "3007876",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Base excess in Arterial blood by calculation",
+    "aliases": [
+      "Base excess in Arterial blood by calculation",
+      "Arterial Base Excess"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224828
+      ]
+    },
+    "unit": null,
+    "concept_id": "3003396",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Bicarbonate [Moles/volume] in Serum or Plasma",
+    "aliases": [
+      "Bicarbonate [Moles/volume] in Serum or Plasma",
+      "HCO3 (serum)"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        227443
+      ]
+    },
+    "unit": null,
+    "concept_id": "3016293",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Blood temperature",
+    "aliases": [
+      "Blood temperature",
+      "Blood Temperature CCO (C)"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        226329
+      ]
+    },
+    "unit": null,
+    "concept_id": "21490586",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Body height",
+    "aliases": [
+      "Body height",
+      "Height",
+      "Height (cm)"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        226707,
+        226730
+      ]
+    },
+    "unit": null,
+    "concept_id": "3036277",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Body temperature",
+    "aliases": [
+      "Body temperature",
+      "Temperature Fahrenheit",
+      "Temperature Celsius"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        223761,
+        223762
+      ]
+    },
+    "unit": null,
+    "concept_id": "3020891",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Body temperature measurement site",
+    "aliases": [
+      "Body temperature measurement site",
+      "Temperature Site"
+    ],
+    "domain": "Observation",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224642
+      ]
+    },
+    "unit": null,
+    "concept_id": "3024265",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Body weight",
+    "aliases": [
+      "Body weight",
+      "Admission Weight (lbs.)",
+      "Admission Weight (Kg)"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        226531,
+        226512
+      ]
+    },
+    "unit": null,
+    "concept_id": "3025315",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Bowel sounds",
+    "aliases": [
+      "Bowel sounds",
+      "Bowel Sounds"
+    ],
+    "domain": "Observation",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224004
+      ]
+    },
+    "unit": null,
+    "concept_id": "4337265",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Breath rate setting Ventilator",
+    "aliases": [
+      "Breath rate setting Ventilator",
+      "Respiratory Rate (Set)"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224688
+      ]
+    },
+    "unit": null,
+    "concept_id": "3007469",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Breath rate spontaneous",
+    "aliases": [
+      "Breath rate spontaneous",
+      "Respiratory Rate (spontaneous)",
+      "Spont RR"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224689,
+        224422
+      ]
+    },
+    "unit": null,
+    "concept_id": "1175625",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Calcium.ionized [Moles/volume] in Blood",
+    "aliases": [
+      "Calcium.ionized [Moles/volume] in Blood",
+      "Ionized Calcium"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225667
+      ]
+    },
+    "unit": null,
+    "concept_id": "3021119",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Carbon dioxide [Partial pressure] in Arterial blood",
+    "aliases": [
+      "Carbon dioxide [Partial pressure] in Arterial blood",
+      "Arterial CO2 Pressure"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        220235
+      ]
+    },
+    "unit": null,
+    "concept_id": "3027946",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Carbon dioxide production (VCO2) in Respiratory system",
+    "aliases": [
+      "Carbon dioxide production (VCO2) in Respiratory system",
+      "CO2 production"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        220245
+      ]
+    },
+    "unit": null,
+    "concept_id": "21490580",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Carbon dioxide, total [Moles/volume] in Arterial blood by calculation",
+    "aliases": [
+      "Carbon dioxide, total [Moles/volume] in Arterial blood by calculation",
+      "TCO2 (calc) Arterial"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225698
+      ]
+    },
+    "unit": null,
+    "concept_id": "3037663",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Central venous pressure (CVP)",
+    "aliases": [
+      "Central venous pressure (CVP)",
+      "Central Venous Pressure"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        220074
+      ]
+    },
+    "unit": null,
+    "concept_id": "21490675",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Cerebral perfusion pressure",
+    "aliases": [
+      "Cerebral perfusion pressure",
+      "Cerebral Perfusion Pressure",
+      "Cerebral Perfusion Pressure Alarm - Low",
+      "Cerebral Perfusion Pressure Alarm - High"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        227066,
+        227717,
+        227716
+      ]
+    },
+    "unit": null,
+    "concept_id": "21490695",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Chloride [Moles/volume] in Serum or Plasma",
+    "aliases": [
+      "Chloride [Moles/volume] in Serum or Plasma",
+      "Chloride (serum)"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        220602
+      ]
+    },
+    "unit": null,
+    "concept_id": "3014576",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Color of Skin",
+    "aliases": [
+      "Color of Skin",
+      "Skin Color"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224028
+      ]
+    },
+    "unit": null,
+    "concept_id": "3043970",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Color of Sputum",
+    "aliases": [
+      "Color of Sputum",
+      "Sputum Color"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224370
+      ]
+    },
+    "unit": null,
+    "concept_id": "36203862",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Color of Stool",
+    "aliases": [
+      "Color of Stool",
+      "Stool Color"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224794
+      ]
+    },
+    "unit": null,
+    "concept_id": "3037490",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Color of Urine",
+    "aliases": [
+      "Color of Urine",
+      "Urine Color"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224016
+      ]
+    },
+    "unit": null,
+    "concept_id": "3027162",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Consistency of Stool",
+    "aliases": [
+      "Consistency of Stool",
+      "Stool Consistency"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224011
+      ]
+    },
+    "unit": null,
+    "concept_id": "3015273",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Creatinine [Mass/volume] in Serum or Plasma",
+    "aliases": [
+      "Creatinine [Mass/volume] in Serum or Plasma",
+      "Creatinine (serum)"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        220615
+      ]
+    },
+    "unit": null,
+    "concept_id": "3016723",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Current smoker",
+    "aliases": [
+      "Current smoker",
+      "Tobacco use"
+    ],
+    "domain": "Observation",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225108
+      ]
+    },
+    "unit": null,
+    "concept_id": "40766945",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Diastolic blood pressure",
+    "aliases": [
+      "Diastolic blood pressure",
+      "Arterial Blood Pressure diastolic",
+      "ART BP Diastolic",
+      "Manual Blood Pressure Diastolic Left",
+      "Manual Blood Pressure Diastolic Right"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        220051,
+        225310,
+        224643,
+        227242
+      ]
+    },
+    "unit": null,
+    "concept_id": "3012888",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Diastolic blood pressure by Noninvasive",
+    "aliases": [
+      "Diastolic blood pressure by Noninvasive",
+      "Non Invasive Blood Pressure diastolic"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        220180
+      ]
+    },
+    "unit": null,
+    "concept_id": "21492240",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Diastolic blood pressure--standing",
+    "aliases": [
+      "Diastolic blood pressure--standing",
+      "Orthostatic BPd standing"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        226096
+      ]
+    },
+    "unit": null,
+    "concept_id": "3019962",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Diastolic blood pressure--supine",
+    "aliases": [
+      "Diastolic blood pressure--supine",
+      "Orthostatic BPd lying"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        226092
+      ]
+    },
+    "unit": null,
+    "concept_id": "3013940",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Dressing for Wound",
+    "aliases": [
+      "Dressing for Wound",
+      "Incision Dressing #1"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224042
+      ]
+    },
+    "unit": null,
+    "concept_id": "3042347",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Edema site",
+    "aliases": [
+      "Edema site",
+      "Edema Location"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224031
+      ]
+    },
+    "unit": null,
+    "concept_id": "3046838",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Endotracheal tube Diameter",
+    "aliases": [
+      "Endotracheal tube Diameter",
+      "ETT Size (ID)"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        223837
+      ]
+    },
+    "unit": null,
+    "concept_id": "21491186",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Friction and shear Braden scale",
+    "aliases": [
+      "Friction and shear Braden scale",
+      "Braden Friction/Shear"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224059
+      ]
+    },
+    "unit": null,
+    "concept_id": "3037347",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Gas flow Respiratory system airway",
+    "aliases": [
+      "Gas flow Respiratory system airway",
+      "Flow Rate (L/min)"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224691
+      ]
+    },
+    "unit": null,
+    "concept_id": "3025019",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Glasgow coma score eye opening",
+    "aliases": [
+      "Glasgow coma score eye opening",
+      "GCS - Eye Opening"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        220739
+      ]
+    },
+    "unit": null,
+    "concept_id": "3016335",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Glasgow coma score motor",
+    "aliases": [
+      "Glasgow coma score motor",
+      "GCS - Motor Response"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        223901
+      ]
+    },
+    "unit": null,
+    "concept_id": "3008223",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Glasgow coma score verbal",
+    "aliases": [
+      "Glasgow coma score verbal",
+      "GCS - Verbal Response"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        223900
+      ]
+    },
+    "unit": null,
+    "concept_id": "3009094",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Glucose [Mass/volume] in Serum or Plasma",
+    "aliases": [
+      "Glucose [Mass/volume] in Serum or Plasma",
+      "Glucose (serum)"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        220621
+      ]
+    },
+    "unit": null,
+    "concept_id": "3004501",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Heart rate",
+    "aliases": [
+      "Heart rate",
+      "Heart Rate"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        220045
+      ]
+    },
+    "unit": null,
+    "concept_id": "3027018",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Heart rate --sitting",
+    "aliases": [
+      "Heart rate --sitting",
+      "Orthostatic HR sitting"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        223765
+      ]
+    },
+    "unit": null,
+    "concept_id": "40771525",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Heart rate --supine",
+    "aliases": [
+      "Heart rate --supine",
+      "Orthostatic HR lying"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        223764
+      ]
+    },
+    "unit": null,
+    "concept_id": "40771524",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Heart rate rhythm",
+    "aliases": [
+      "Heart rate rhythm",
+      "Heart Rhythm"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        220048
+      ]
+    },
+    "unit": null,
+    "concept_id": "3022318",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Hematocrit [Volume Fraction] of Blood",
+    "aliases": [
+      "Hematocrit [Volume Fraction] of Blood",
+      "Hematocrit (serum)"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        220545
+      ]
+    },
+    "unit": null,
+    "concept_id": "3009542",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Hemoglobin [Mass/volume] in Blood",
+    "aliases": [
+      "Hemoglobin [Mass/volume] in Blood",
+      "Hemoglobin"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        220228
+      ]
+    },
+    "unit": null,
+    "concept_id": "3000963",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Hemoglobin.gastrointestinal [Presence] in Stool",
+    "aliases": [
+      "Hemoglobin.gastrointestinal [Presence] in Stool",
+      "Stool Guaiac"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224013
+      ]
+    },
+    "unit": null,
+    "concept_id": "3016251",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "History of Past illness",
+    "aliases": [
+      "History of Past illness",
+      "Past medical history"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225059
+      ]
+    },
+    "unit": null,
+    "concept_id": "3001062",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "History of Tobacco use",
+    "aliases": [
+      "History of Tobacco use",
+      "Tobacco Use History"
+    ],
+    "domain": "Observation",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        227687
+      ]
+    },
+    "unit": null,
+    "concept_id": "3012697",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Indicators of pain or possible pain",
+    "aliases": [
+      "Indicators of pain or possible pain",
+      "Pain Present",
+      "Currently experiencing pain"
+    ],
+    "domain": "Observation",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        223781,
+        225113
+      ]
+    },
+    "unit": null,
+    "concept_id": "40757693",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Inhaled oxygen concentration",
+    "aliases": [
+      "Inhaled oxygen concentration",
+      "Inspired O2 Fraction",
+      "FiO2ApacheIIValue",
+      "FiO2_ApacheIV"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        223835,
+        226754,
+        227010
+      ]
+    },
+    "unit": null,
+    "concept_id": "3020716",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Inspiration [Time] Respiratory system",
+    "aliases": [
+      "Inspiration [Time] Respiratory system",
+      "Inspiratory Time"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224738
+      ]
+    },
+    "unit": null,
+    "concept_id": "21490516",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Insulin pump",
+    "aliases": [
+      "Insulin pump"
+    ],
+    "domain": "Device",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        228236
+      ]
+    },
+    "unit": null,
+    "concept_id": "4321388",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Intracranial pressure (ICP)",
+    "aliases": [
+      "Intracranial pressure (ICP)",
+      "Intra Cranial Pressure",
+      "Intra Cranial Pressure #2"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        220765,
+        227989
+      ]
+    },
+    "unit": null,
+    "concept_id": "21490653",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Lactate [Moles/volume] in Arterial blood",
+    "aliases": [
+      "Lactate [Moles/volume] in Arterial blood",
+      "Lactic Acid"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225668
+      ]
+    },
+    "unit": null,
+    "concept_id": "3018405",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Left eye Pupil diameter Manual",
+    "aliases": [
+      "Left eye Pupil diameter Manual",
+      "Pupil Size Left"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224733
+      ]
+    },
+    "unit": null,
+    "concept_id": "3026611",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Left pupil Pupillary response",
+    "aliases": [
+      "Left pupil Pupillary response",
+      "Pupil Response Left"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        227288
+      ]
+    },
+    "unit": null,
+    "concept_id": "21491763",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Left ventricular Cardiac index",
+    "aliases": [
+      "Left ventricular Cardiac index",
+      "Cardiac Index (CI NICOM)",
+      "CI (PiCCO)"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        228368,
+        228177
+      ]
+    },
+    "unit": null,
+    "concept_id": "21490712",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Left ventricular Cardiac output",
+    "aliases": [
+      "Left ventricular Cardiac output",
+      "Cardiac Output (CCO)",
+      "Cardiac Output (thermodilution)",
+      "CO (Arterial)",
+      "Cardiac Output (CO NICOM)",
+      "CO (PiCCO)",
+      "CO-Tandem Heart Flow"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224842,
+        220088,
+        227543,
+        228369,
+        228178,
+        228189
+      ]
+    },
+    "unit": null,
+    "concept_id": "3005555",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Left ventricular Stroke volume",
+    "aliases": [
+      "Left ventricular Stroke volume",
+      "SV (Arterial)",
+      "Stroke Volume (SV NICOM)"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        227547,
+        228374
+      ]
+    },
+    "unit": null,
+    "concept_id": "3036518",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Left ventricular Stroke volume index",
+    "aliases": [
+      "Left ventricular Stroke volume index",
+      "Stroke Volume Index (SVI NICOM)",
+      "SVI (PiCCO)"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        228375,
+        228182
+      ]
+    },
+    "unit": null,
+    "concept_id": "21490880",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Level of arousal",
+    "aliases": [
+      "Level of arousal",
+      "Riker-SAS Scale"
+    ],
+    "domain": "Observation",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        223753
+      ]
+    },
+    "unit": null,
+    "concept_id": "21494989",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Maximum expiratory gas flow Respiratory system airway",
+    "aliases": [
+      "Maximum expiratory gas flow Respiratory system airway",
+      "Peak Exp Flow Rate"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224728
+      ]
+    },
+    "unit": null,
+    "concept_id": "3043729",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Mean airway pressure",
+    "aliases": [
+      "Mean airway pressure",
+      "Mean Airway Pressure"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224697
+      ]
+    },
+    "unit": null,
+    "concept_id": "42527086",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Mean blood pressure",
+    "aliases": [
+      "Mean blood pressure",
+      "Arterial Blood Pressure mean",
+      "ART BP Mean"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        220052,
+        225312
+      ]
+    },
+    "unit": null,
+    "concept_id": "3027598",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Mean blood pressure by Noninvasive",
+    "aliases": [
+      "Mean blood pressure by Noninvasive",
+      "Non Invasive Blood Pressure mean"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        220181
+      ]
+    },
+    "unit": null,
+    "concept_id": "21492241",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Moisture exposure Braden scale",
+    "aliases": [
+      "Moisture exposure Braden scale",
+      "Braden Moisture"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224055
+      ]
+    },
+    "unit": null,
+    "concept_id": "3037022",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Nutrition intake pattern Braden scale",
+    "aliases": [
+      "Nutrition intake pattern Braden scale",
+      "Braden Nutrition"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224058
+      ]
+    },
+    "unit": null,
+    "concept_id": "3035816",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Oral care given",
+    "aliases": [
+      "Oral care given",
+      "Oral Care"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        226168
+      ]
+    },
+    "unit": null,
+    "concept_id": "3039006",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Oxygen [Partial pressure] in Arterial blood",
+    "aliases": [
+      "Oxygen [Partial pressure] in Arterial blood",
+      "Arterial O2 pressure"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        220224
+      ]
+    },
+    "unit": null,
+    "concept_id": "3027801",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Oxygen delivery",
+    "aliases": [
+      "Oxygen delivery",
+      "O2 Delivery Device(s)"
+    ],
+    "domain": "Observation",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        226732
+      ]
+    },
+    "unit": null,
+    "concept_id": "4036936",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Oxygen gas flow Oxygen delivery system",
+    "aliases": [
+      "Oxygen gas flow Oxygen delivery system",
+      "O2 Flow",
+      "O2 Flow (additional cannula)",
+      "BiPap O2 Flow"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        223834,
+        227287,
+        227582
+      ]
+    },
+    "unit": null,
+    "concept_id": "3014080",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Oxygen saturation in Arterial blood",
+    "aliases": [
+      "Oxygen saturation in Arterial blood",
+      "Arterial O2 Saturation",
+      "PAR-Oxygen saturation"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        220227,
+        228232
+      ]
+    },
+    "unit": null,
+    "concept_id": "3016502",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Oxygen saturation in Arterial blood by Pulse oximetry",
+    "aliases": [
+      "Oxygen saturation in Arterial blood by Pulse oximetry",
+      "O2 saturation pulseoxymetry"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        220277
+      ]
+    },
+    "unit": null,
+    "concept_id": "40762499",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Oxygen saturation in Mixed venous blood",
+    "aliases": [
+      "Oxygen saturation in Mixed venous blood",
+      "SvO2",
+      "Mixed Venous O2% Sat",
+      "ScvO2 (Presep)",
+      "ScvO2 (Presep) SQI",
+      "ScvO2 Central Venous O2% Sat"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        223772,
+        225674,
+        227549,
+        227806,
+        226541
+      ]
+    },
+    "unit": null,
+    "concept_id": "3018465",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Pain assessment",
+    "aliases": [
+      "Pain assessment",
+      "Pain Assessment Method"
+    ],
+    "domain": "Procedure",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        223795,
+        229687
+      ]
+    },
+    "unit": null,
+    "concept_id": "4021323",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Pain management",
+    "aliases": [
+      "Pain management",
+      "Pain Management"
+    ],
+    "domain": "Procedure",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        223792
+      ]
+    },
+    "unit": null,
+    "concept_id": "4083171",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+    "aliases": [
+      "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "Pain Level",
+      "Pain Level Response"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        223791,
+        224409
+      ]
+    },
+    "unit": null,
+    "concept_id": "43055141",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Passing flatus",
+    "aliases": [
+      "Passing flatus",
+      "Flatus"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224005
+      ]
+    },
+    "unit": null,
+    "concept_id": "21494965",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "PCA lockout time Infusion pump",
+    "aliases": [
+      "PCA lockout time Infusion pump",
+      "PCA lockout (min)"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224329
+      ]
+    },
+    "unit": null,
+    "concept_id": "21490888",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "pH of Arterial blood",
+    "aliases": [
+      "pH of Arterial blood",
+      "PH (Arterial)"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        223830
+      ]
+    },
+    "unit": null,
+    "concept_id": "3019977",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Physical activity Braden scale",
+    "aliases": [
+      "Physical activity Braden scale",
+      "Braden Activity"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224056
+      ]
+    },
+    "unit": null,
+    "concept_id": "3037318",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Physical findings of Abdomen by Palpation",
+    "aliases": [
+      "Physical findings of Abdomen by Palpation",
+      "Abdominal Assessment"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224003
+      ]
+    },
+    "unit": null,
+    "concept_id": "21494966",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Physical mobility Braden scale",
+    "aliases": [
+      "Physical mobility Braden scale",
+      "Braden Mobility"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224057
+      ]
+    },
+    "unit": null,
+    "concept_id": "3035206",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Positive end expiratory pressure setting Ventilator",
+    "aliases": [
+      "Positive end expiratory pressure setting Ventilator",
+      "PEEP set"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        220339
+      ]
+    },
+    "unit": null,
+    "concept_id": "3022875",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Postmenopausal state",
+    "aliases": [
+      "Postmenopausal state",
+      "Post menopausal"
+    ],
+    "domain": "Condition",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225085
+      ]
+    },
+    "unit": null,
+    "concept_id": "4295261",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Potassium [Moles/volume] in Serum or Plasma",
+    "aliases": [
+      "Potassium [Moles/volume] in Serum or Plasma",
+      "Potassium (serum)"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        227442
+      ]
+    },
+    "unit": null,
+    "concept_id": "3023103",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Pregnant",
+    "aliases": [
+      "Pregnant"
+    ],
+    "domain": "Meas Value",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225082
+      ]
+    },
+    "unit": null,
+    "concept_id": "45881770",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Pressure max Respiratory system airway --during inspiration",
+    "aliases": [
+      "Pressure max Respiratory system airway --during inspiration",
+      "Peak Insp. Pressure"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224695
+      ]
+    },
+    "unit": null,
+    "concept_id": "21490650",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Pressure support setting Ventilator",
+    "aliases": [
+      "Pressure support setting Ventilator",
+      "PSV Level"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224701
+      ]
+    },
+    "unit": null,
+    "concept_id": "3000461",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Pressure.plateau Respiratory system airway --on ventilator",
+    "aliases": [
+      "Pressure.plateau Respiratory system airway --on ventilator",
+      "Plateau Pressure"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224696
+      ]
+    },
+    "unit": null,
+    "concept_id": "36303946",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Pulmonary artery Diastolic blood pressure",
+    "aliases": [
+      "Pulmonary artery Diastolic blood pressure",
+      "Pulmonary Artery Pressure diastolic"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        220060
+      ]
+    },
+    "unit": null,
+    "concept_id": "3017188",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Pulmonary artery Mean blood pressure",
+    "aliases": [
+      "Pulmonary artery Mean blood pressure",
+      "Pulmonary Artery Pressure mean"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        220061
+      ]
+    },
+    "unit": null,
+    "concept_id": "3028074",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Pulmonary artery Systolic blood pressure",
+    "aliases": [
+      "Pulmonary artery Systolic blood pressure",
+      "Pulmonary Artery Pressure systolic"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        220059
+      ]
+    },
+    "unit": null,
+    "concept_id": "3005606",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Pulmonary artery wedge pressure",
+    "aliases": [
+      "Pulmonary artery wedge pressure",
+      "PCWP"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        223771
+      ]
+    },
+    "unit": null,
+    "concept_id": "21490776",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Q-T interval corrected",
+    "aliases": [
+      "Q-T interval corrected",
+      "QTc"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224359
+      ]
+    },
+    "unit": null,
+    "concept_id": "3026258",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Respiration rhythm",
+    "aliases": [
+      "Respiration rhythm",
+      "Respiratory Pattern"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        223985
+      ]
+    },
+    "unit": null,
+    "concept_id": "3020481",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Respiratory effort",
+    "aliases": [
+      "Respiratory effort",
+      "Respiratory Effort"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        223990
+      ]
+    },
+    "unit": null,
+    "concept_id": "21492835",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Respiratory rate",
+    "aliases": [
+      "Respiratory rate",
+      "Respiratory Rate",
+      "Respiratory Rate (Total)"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        220210,
+        224690
+      ]
+    },
+    "unit": null,
+    "concept_id": "3024171",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Resuscitation status",
+    "aliases": [
+      "Resuscitation status",
+      "Code Status"
+    ],
+    "domain": "Observation",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        223758
+      ]
+    },
+    "unit": null,
+    "concept_id": "4127294",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Richmond agitation-sedation scale",
+    "aliases": [
+      "Richmond agitation-sedation scale",
+      "Richmond-RAS Scale"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        228096
+      ]
+    },
+    "unit": null,
+    "concept_id": "36684829",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Right eye Pupil diameter Manual",
+    "aliases": [
+      "Right eye Pupil diameter Manual",
+      "Pupil Size Right"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        223907
+      ]
+    },
+    "unit": null,
+    "concept_id": "3010321",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Right pupil Pupillary response",
+    "aliases": [
+      "Right pupil Pupillary response",
+      "Pupil Response Right"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        227121
+      ]
+    },
+    "unit": null,
+    "concept_id": "21490963",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Sensory perception Braden scale",
+    "aliases": [
+      "Sensory perception Braden scale",
+      "Braden Sensory Perception"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224054
+      ]
+    },
+    "unit": null,
+    "concept_id": "3036098",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Skin integrity",
+    "aliases": [
+      "Skin integrity",
+      "Skin Integrity"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224026
+      ]
+    },
+    "unit": null,
+    "concept_id": "21492838",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Sodium [Moles/volume] in Serum or Plasma",
+    "aliases": [
+      "Sodium [Moles/volume] in Serum or Plasma",
+      "Sodium (serum)"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        220645
+      ]
+    },
+    "unit": null,
+    "concept_id": "3019550",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Stroke volume variation",
+    "aliases": [
+      "Stroke volume variation",
+      "SVV (Arterial)",
+      "Stroke Volume Variation (SVV NICOM)",
+      "SVV (PiCCO)"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        227546,
+        228376,
+        228184
+      ]
+    },
+    "unit": null,
+    "concept_id": "37116693",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Systemic vascular Resistance index",
+    "aliases": [
+      "Systemic vascular Resistance index",
+      "SVRI (PiCCO)"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        228185
+      ]
+    },
+    "unit": null,
+    "concept_id": "3008047",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Systolic blood pressure",
+    "aliases": [
+      "Systolic blood pressure",
+      "Arterial Blood Pressure systolic",
+      "ART BP Systolic",
+      "Manual Blood Pressure Systolic Left",
+      "Manual Blood Pressure Systolic Right"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        220050,
+        225309,
+        224167,
+        227243
+      ]
+    },
+    "unit": null,
+    "concept_id": "3004249",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Systolic blood pressure by Noninvasive",
+    "aliases": [
+      "Systolic blood pressure by Noninvasive",
+      "Non Invasive Blood Pressure systolic"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        220179
+      ]
+    },
+    "unit": null,
+    "concept_id": "21492239",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Systolic blood pressure--standing",
+    "aliases": [
+      "Systolic blood pressure--standing",
+      "Orthostatic BPs standing"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        223766
+      ]
+    },
+    "unit": null,
+    "concept_id": "3035856",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Systolic blood pressure--supine",
+    "aliases": [
+      "Systolic blood pressure--supine",
+      "Orthostatic BPs lying"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224645
+      ]
+    },
+    "unit": null,
+    "concept_id": "3009395",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Temperature Inhaled gas",
+    "aliases": [
+      "Temperature Inhaled gas",
+      "Inspired Gas Temp."
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        223872
+      ]
+    },
+    "unit": null,
+    "concept_id": "3004297",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Temperature of Skin",
+    "aliases": [
+      "Temperature of Skin",
+      "Skin Temperature"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224027
+      ]
+    },
+    "unit": null,
+    "concept_id": "3039856",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Therapeutic bed",
+    "aliases": [
+      "Therapeutic bed",
+      "Therapeutic Bed"
+    ],
+    "domain": "Device",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224087,
+        229604
+      ]
+    },
+    "unit": null,
+    "concept_id": "45768171",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Tidal volume Ventilator --on ventilator",
+    "aliases": [
+      "Tidal volume Ventilator --on ventilator",
+      "Tidal Volume (observed)",
+      "Tidal Volume (set)"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224685,
+        224684
+      ]
+    },
+    "unit": null,
+    "concept_id": "21490854",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Tidal volume.inspired maximum setting Ventilator alarm",
+    "aliases": [
+      "Tidal volume.inspired maximum setting Ventilator alarm",
+      "Vti High"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        223874
+      ]
+    },
+    "unit": null,
+    "concept_id": "40760766",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Tidal volume.spontaneous --on ventilator",
+    "aliases": [
+      "Tidal volume.spontaneous --on ventilator",
+      "Tidal Volume (spontaneous)",
+      "Spont Vt"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224686,
+        224421
+      ]
+    },
+    "unit": null,
+    "concept_id": "3017594",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Total PEEP Respiratory system",
+    "aliases": [
+      "Total PEEP Respiratory system",
+      "Total PEEP Level"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224700
+      ]
+    },
+    "unit": null,
+    "concept_id": "42527140",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Type of GI tube",
+    "aliases": [
+      "Type of GI tube",
+      "GI #1 Tube Type"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224785
+      ]
+    },
+    "unit": null,
+    "concept_id": "3009497",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Urea nitrogen [Mass/volume] in Blood",
+    "aliases": [
+      "Urea nitrogen [Mass/volume] in Blood",
+      "BUN"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225624
+      ]
+    },
+    "unit": null,
+    "concept_id": "3004295",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Ventilation mode Ventilator",
+    "aliases": [
+      "Ventilation mode Ventilator",
+      "Ventilator Mode"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        223849
+      ]
+    },
+    "unit": null,
+    "concept_id": "3004921",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Ventilator type",
+    "aliases": [
+      "Ventilator type",
+      "Ventilator Type"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        223848
+      ]
+    },
+    "unit": null,
+    "concept_id": "3007397",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Vital capacity [Volume] Respiratory system",
+    "aliases": [
+      "Vital capacity [Volume] Respiratory system",
+      "Vital Cap"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224420
+      ]
+    },
+    "unit": null,
+    "concept_id": "3004305",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Volume expired per minute Respiratory system",
+    "aliases": [
+      "Volume expired per minute Respiratory system",
+      "Minute Volume"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224687
+      ]
+    },
+    "unit": null,
+    "concept_id": "21490753",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  },
+  {
+    "canonical": "Wound closure type",
+    "aliases": [
+      "Wound closure type",
+      "Incision Closure #1"
+    ],
+    "domain": "Measurement",
+    "db_filter": {
+      "table": "chartevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        224040
+      ]
+    },
+    "unit": null,
+    "concept_id": "43055270",
+    "notes": "source=mapping/meas_chartevents_main.csv; canonical_source=concept_name"
+  }
+]

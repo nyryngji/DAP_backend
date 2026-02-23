@@ -1,0 +1,276 @@
+[
+  {
+    "canonical": "Vasopressors",
+    "aliases": [
+      "norepinephrine",
+      "epinephrine",
+      "vasopressin",
+      "dopamine",
+      "phenylephrine"
+    ],
+    "domain": "med",
+    "db_filter": {
+      "table": "prescriptions",
+      "column": "drug",
+      "operator": "ILIKE_ANY",
+      "values": [
+        "%norepinephrine%",
+        "%epinephrine%",
+        "%vasopressin%",
+        "%dopamine%",
+        "%phenylephrine%"
+      ]
+    },
+    "unit": null,
+    "notes": "auto_generated_class_dictionary_v1"
+  },
+  {
+    "canonical": "Diuretics",
+    "aliases": [
+      "furosemide",
+      "lasix",
+      "bumetanide",
+      "torsemide",
+      "spironolactone"
+    ],
+    "domain": "med",
+    "db_filter": {
+      "table": "prescriptions",
+      "column": "drug",
+      "operator": "ILIKE_ANY",
+      "values": [
+        "%furosemide%",
+        "%lasix%",
+        "%bumetanide%",
+        "%torsemide%",
+        "%spironolactone%"
+      ]
+    },
+    "unit": null,
+    "notes": "auto_generated_class_dictionary_v1"
+  },
+  {
+    "canonical": "Insulin",
+    "aliases": [
+      "insulin",
+      "glargine",
+      "lispro",
+      "aspart"
+    ],
+    "domain": "med",
+    "db_filter": {
+      "table": "prescriptions",
+      "column": "drug",
+      "operator": "ILIKE_ANY",
+      "values": [
+        "%insulin%",
+        "%glargine%",
+        "%lispro%",
+        "%aspart%"
+      ]
+    },
+    "unit": null,
+    "notes": "auto_generated_class_dictionary_v1"
+  },
+  {
+    "canonical": "BroadSpectrumAntibiotics",
+    "aliases": [
+      "vancomycin",
+      "piperacillin",
+      "cefepime",
+      "meropenem"
+    ],
+    "domain": "med",
+    "db_filter": {
+      "table": "prescriptions",
+      "column": "drug",
+      "operator": "ILIKE_ANY",
+      "values": [
+        "%vancomycin%",
+        "%piperacillin%",
+        "%cefepime%",
+        "%meropenem%"
+      ]
+    },
+    "unit": null,
+    "notes": "auto_generated_class_dictionary_v1"
+  },
+  {
+    "canonical": "Anticoagulants",
+    "aliases": [
+      "heparin",
+      "enoxaparin",
+      "warfarin",
+      "apixaban"
+    ],
+    "domain": "med",
+    "db_filter": {
+      "table": "prescriptions",
+      "column": "drug",
+      "operator": "ILIKE_ANY",
+      "values": [
+        "%heparin%",
+        "%enoxaparin%",
+        "%warfarin%",
+        "%apixaban%"
+      ]
+    },
+    "unit": null,
+    "notes": "auto_generated_class_dictionary_v1"
+  },
+  {
+    "canonical": "Antiplatelets",
+    "aliases": [
+      "aspirin",
+      "clopidogrel",
+      "ticagrelor"
+    ],
+    "domain": "med",
+    "db_filter": {
+      "table": "prescriptions",
+      "column": "drug",
+      "operator": "ILIKE_ANY",
+      "values": [
+        "%aspirin%",
+        "%clopidogrel%",
+        "%ticagrelor%"
+      ]
+    },
+    "unit": null,
+    "notes": "auto_generated_class_dictionary_v1"
+  },
+  {
+    "canonical": "Sedatives",
+    "aliases": [
+      "propofol",
+      "midazolam",
+      "lorazepam",
+      "dexmedetomidine"
+    ],
+    "domain": "med",
+    "db_filter": {
+      "table": "prescriptions",
+      "column": "drug",
+      "operator": "ILIKE_ANY",
+      "values": [
+        "%propofol%",
+        "%midazolam%",
+        "%lorazepam%",
+        "%dexmedetomidine%"
+      ]
+    },
+    "unit": null,
+    "notes": "auto_generated_class_dictionary_v1"
+  },
+  {
+    "canonical": "Analgesics",
+    "aliases": [
+      "fentanyl",
+      "morphine",
+      "hydromorphone",
+      "acetaminophen"
+    ],
+    "domain": "med",
+    "db_filter": {
+      "table": "prescriptions",
+      "column": "drug",
+      "operator": "ILIKE_ANY",
+      "values": [
+        "%fentanyl%",
+        "%morphine%",
+        "%hydromorphone%",
+        "%acetaminophen%"
+      ]
+    },
+    "unit": null,
+    "notes": "auto_generated_class_dictionary_v1"
+  },
+  {
+    "canonical": "Steroids",
+    "aliases": [
+      "hydrocortisone",
+      "methylprednisolone",
+      "prednisone",
+      "dexamethasone"
+    ],
+    "domain": "med",
+    "db_filter": {
+      "table": "prescriptions",
+      "column": "drug",
+      "operator": "ILIKE_ANY",
+      "values": [
+        "%hydrocortisone%",
+        "%methylprednisolone%",
+        "%prednisone%",
+        "%dexamethasone%"
+      ]
+    },
+    "unit": null,
+    "notes": "auto_generated_class_dictionary_v1"
+  },
+  {
+    "canonical": "Antihypertensives",
+    "aliases": [
+      "lisinopril",
+      "losartan",
+      "metoprolol",
+      "amlodipine"
+    ],
+    "domain": "med",
+    "db_filter": {
+      "table": "prescriptions",
+      "column": "drug",
+      "operator": "ILIKE_ANY",
+      "values": [
+        "%lisinopril%",
+        "%losartan%",
+        "%metoprolol%",
+        "%amlodipine%"
+      ]
+    },
+    "unit": null,
+    "notes": "auto_generated_class_dictionary_v1"
+  },
+  {
+    "canonical": "Antiarrhythmics",
+    "aliases": [
+      "amiodarone",
+      "lidocaine",
+      "digoxin"
+    ],
+    "domain": "med",
+    "db_filter": {
+      "table": "prescriptions",
+      "column": "drug",
+      "operator": "ILIKE_ANY",
+      "values": [
+        "%amiodarone%",
+        "%lidocaine%",
+        "%digoxin%"
+      ]
+    },
+    "unit": null,
+    "notes": "auto_generated_class_dictionary_v1"
+  },
+  {
+    "canonical": "AcidSuppression",
+    "aliases": [
+      "pantoprazole",
+      "omeprazole",
+      "famotidine"
+    ],
+    "domain": "med",
+    "db_filter": {
+      "table": "prescriptions",
+      "column": "drug",
+      "operator": "ILIKE_ANY",
+      "values": [
+        "%pantoprazole%",
+        "%omeprazole%",
+        "%famotidine%"
+      ]
+    },
+    "unit": null,
+    "notes": "auto_generated_class_dictionary_v1"
+  }
+]

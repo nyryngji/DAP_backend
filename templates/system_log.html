@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>DAP - 상세 결과 보기</title>
+</head>
+
+<body>
+
+<div id="viewport">
+  <div id="scale-wrapper">
+    <div class="app-container">
+
+      <main class="main-content">
+        <div class="center-area">
+          
+          <header class="content-header">
+            <h1 class="page-title">시스템 모니터링</h1>
+            <div class="header-actions">
+              <button class="btn btn-outline">📅 최근 24시간</button>
+              <button class="btn btn-green">⬇ 다운로드</button>
+            </div>
+          </header>
+
+          <section class="dashboard-grid">
+            <div class="metrics-column">
+  
+              <div class="card metric-card">
+                <div class="card-label">전체 쿼리 수</div>
+                <div class="metric-right">
+                  <div class="card-value">42,840</div>
+                  <div class="card-trend up">
+                    <img class="trend-icon" src="https://img.icons8.com/?size=100&id=tJS2vK4H9r0u&format=png&color=ef4444" alt="상승" />
+                    <span>+12.5% 상승</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card metric-card">
+                <div class="card-label">평균 생성 시간</div>
+                <div class="metric-right">
+                  <div class="card-value">0.84s</div>
+                  <div class="card-trend down">
+                    <img class="trend-icon" src="https://img.icons8.com/?size=100&id=BiewPvkDAwrC&format=png&color=3b82f6" alt="하락" />
+                    <span>-4.2% 빠름</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card metric-card">
+                <div class="card-label">CPU 사용률</div>
+                <div class="metric-right">       
+                  <div class="card-value">1.2%</div>
+                  <div class="card-trend up">
+                    <img class="trend-icon" src="https://img.icons8.com/?size=100&id=tJS2vK4H9r0u&format=png&color=ef4444" alt="상승" />
+                    <span>+0.1% 증가</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="card chart-card">
+              <div class="chart-header">
+                <div class="chart-title-group">
+                  <span class="card-label">쿼리 요청량 추이</span>
+                  <div class="chart-value-row">
+                    <span class="chart-big-value">1,420/hr</span>
+                    <span class="chart-sub-text">최대 사용량</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="chart-container">
+                <svg viewBox="0 0 600 200" preserveAspectRatio="none" class="wave-chart">
+                  <defs>
+                    <linearGradient id="chartGradient" x1="0" x2="0" y1="0" y2="1">
+                      <stop offset="0%" stop-color="#00D286" stop-opacity="0.2"/>
+                      <stop offset="100%" stop-color="#00D286" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <path d="M0,120 C60,120 90,60 160,80 C230,100 270,150 360,130 C450,110 510,40 600,90 V200 H0 Z" fill="url(#chartGradient)" />
+                  <path d="M0,120 C60,120 90,60 160,80 C230,100 270,150 360,130 C450,110 510,40 600,90" fill="none" stroke="#00D286" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+
+              <div class="chart-labels">
+                <span>08:00</span><span>12:00</span><span>16:00</span><span>20:00</span><span>00:00</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="card table-card">
+            <div class="table-header">
+              <h2>권한이 없는 테이블 접근 시도</h2>
+              
+              <div class="container-12">
+                <div class="container-13">
+                  <form class="input" role="search" aria-label="사용자 검색">
+                    <div class="container-14">
+                      <label for="log-user-search" class="visually-hidden">사용자 ID 또는 이름으로 검색</label>
+                      <input type="search" id="log-user-search" class="p" placeholder="사용자 ID 또는 이름으로 검색..." />
+                    </div>
+                  </form>
+                  <div class="container-15">
+                    <div class="container-4">
+                      <div class="icon" aria-hidden="true"><img class="vector" src="https://img.icons8.com/?size=100&id=7695&format=png&color=94A3BB" alt="" /></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            
+            <div class="table-wrapper">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th width="20%">사용자ID</th>
+                    <th width="55%">오류 코드</th>
+                    <th width="25%">날짜</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>U-88219</td>
+                    <td><div class="code-box">오류번호 23</div></td>
+                    <td>2026-01-29 10:42:18</td>
+                  </tr>
+                  <tr>
+                    <td>U-88224</td>
+                    <td><div class="code-box">오류번호 23</div></td>
+                    <td>2025-12-18 22:05:44</td>
+                  </tr>
+                  <tr>
+                    <td>U-77102</td>
+                    <td><div class="code-box">오류번호 23</div></td>
+                    <td>2025-11-03 09:19:07</td>
+                  </tr>
+                  <tr>
+                    <td>U-77203</td>
+                    <td><div class="code-box">오류번호 23</div></td>
+                    <td>2025-11-03 09:19:07</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="pagination-footer">
+              <div class="page-info">오늘 생성된 로그 2,400건 중 15건 표시</div>
+              <div class="pagination-controls">
+                <button class="page-btn prev">&lt;</button>
+                <button class="page-btn active" aria-current="page">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn next">&gt;</button>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </main>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  const BASE_WIDTH = 1440;
+  const BASE_HEIGHT = 900;
+
+  function applyScale() {
+    const scaleX = window.innerWidth / BASE_WIDTH;
+    const scaleY = window.innerHeight / BASE_HEIGHT;
+    const scale = Math.min(scaleX, scaleY);
+    document.getElementById("scale-wrapper").style.transform = `scale(${scale})`;
+  }
+
+  window.addEventListener("resize", applyScale);
+  applyScale();
+
+  const sidebarButtons = document.querySelectorAll(
+    ".menu-section .menu-item, .system-menu-section .menu-item"
+  );
+  sidebarButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      sidebarButtons.forEach((item) => item.classList.remove("active"));
+      btn.classList.add("active");
+    });
+  });
+
+  const tabButtons = document.querySelectorAll(".tabs-filters [role=\"tab\"]");
+  tabButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      tabButtons.forEach((item) => {
+        item.classList.remove("is-active");
+        item.setAttribute("aria-selected", "false");
+      });
+      btn.classList.add("is-active");
+      btn.setAttribute("aria-selected", "true");
+    });
+  });
+
+  const pageButtons = document.querySelectorAll(".pagination-footer .page-btn");
+  pageButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      pageButtons.forEach((item) => {
+        item.classList.remove("active");
+        item.removeAttribute("aria-current");
+      });
+      btn.classList.add("active");
+      btn.setAttribute("aria-current", "page");
+    });
+  });
+</script>
+
+</body>
+</html>

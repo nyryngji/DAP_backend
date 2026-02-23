@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+  <title>DAP - 상세 결과 보기</title>
+</head>
+
+<body class="popup-mode">
+
+  <div class="main-inner">
+    <div class="result-header">
+      <h2>질의 결과</h2>
+      <div class="header-actions">
+        <button class="header-btn">
+          <img src="https://img.icons8.com/?size=100&id=770&format=png&color=0E1013" />
+          다운로드
+        </button>
+        <button class="header-btn">
+          <img src="https://img.icons8.com/?size=100&id=88634&format=png&color=0E1013" />
+          재실행
+        </button>
+        <a href="{{ url_for('view_favorite_page') }}" class="header-btn">
+          <img src="https://img.icons8.com/?size=100&id=88634&format=png&color=0E1013" />
+          나가기
+        </a>
+      </div>
+    </div>
+
+    <form class="favorite-box"
+      method="post"
+      action="{{ url_for('popup', answer_id=answer_id) }}">
+
+      <div class="star">
+        {% if update_favorite_title == 'Y' %}
+        <img class="star-icon star-filled" 
+              src="https://img.icons8.com/fluency/48/star.png" alt="star" />
+        {% else %}
+        <img class="star-icon star-outline" 
+              src="https://img.icons8.com/ios/50/star--v1.png" alt="unstar" />
+        {% endif %}
+      </div>
+
+      <input id="favoriteName" type="text" value="{{ favorite_title or '' }}" name="favorite_title" />
+      <button class="header-btn" type="submit">
+        <img src="https://img.icons8.com/?size=100&id=85185&format=png&color=000000" />
+        즐겨찾기 저장
+      </button>
+    </form>
+
+    <div class="query-toggle-bar" onclick="toggleQueryBar()">
+      <span class="query-toggle-title">쿼리보기</span>
+      <img id="queryToggleIcon" src="https://img.icons8.com/ios-glyphs/30/chevron-down.png" alt="toggle" />
+    </div>
+
+    {% if sql %}
+    <div class="query-content-bar" id="queryContent" style="display: none;">
+      <pre>
+      {{ sql }}
+      </pre>
+    </div>
+    {% endif %}
+
+    <div class="result-card">
+      <table>
+        <thead>
+          <tr>
+            {% for col in table_info.columns %}
+              <th>{{ col }}</th>
+            {% endfor %}
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in table_info.rows %}
+            <tr>
+              {% for cell in row %}
+                <td>{{ cell }}</td>
+              {% endfor %}
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="graph-condition-wrap">
+      <div class="graph-section">
+        <form method="post" action="{{ url_for('popup', answer_id=answer_id) }}">
+          <div class="graph-form">
+            <h3 class="section-title">그래프</h3>
+            <button class="header-btn" type="submit"> 
+              <img src="https://img.icons8.com/?size=100&id=xKAfx2KN4Ea6&format=png&color=000000" />
+              생성
+            </button>
+          </div>
+          <div class="graph-select-row">
+            <div class="graph-select">
+              <label>가로축</label>
+              <select name="x_axis">
+                {% for col in table_info.columns %}
+                  <option value="{{ col }}">{{ col }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="graph-select">
+              <label>세로축</label>
+              <select name="y_axis">
+                {% for col in table_info.columns %}
+                  <option value="{{ col }}">{{ col }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="graph-select">
+              <label>그래프</label>
+              <select name="graph_type">
+                <option value="line">LINE</option>
+                <option value="bar">BAR</option>
+                <option value="scatter">SCATTER</option>
+              </select>
+            </div>
+          </div>
+        </form>
+        {% if graph_html %}
+          <div class="graph-canvas">
+              {{ graph_html | safe }}
+          </div>
+        {% endif %}
+        {% if graph_error %}
+          <div style="color:red; margin-bottom:10px;">
+              {{ graph_error }}
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="logic-section">
+        <h3 class="section-title">조건 및 로직</h3>
+        <ul class="logic-list">
+          <li>
+            <img src="https://img.icons8.com/color/48/checked--v1.png" alt="check" />
+            <span>ICU stay 기준 사망률</span>
+          </li>
+          <li>
+            <img src="https://img.icons8.com/color/48/checked--v1.png" alt="check" />
+            <span>최근 1년 기준</span>
+          </li>
+          <li>
+            <img src="https://img.icons8.com/color/48/checked--v1.png" alt="check" />
+            <span>분기별 비교</span>
+          </li>
+        </ul>
+      </div>
+    </div> 
+  </div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

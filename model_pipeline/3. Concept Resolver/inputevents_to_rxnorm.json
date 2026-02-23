@@ -1,0 +1,3034 @@
+[
+  {
+    "canonical": "200 ML nicardipine hydrochloride 0.2 MG/ML Injection",
+    "aliases": [
+      "200 ML nicardipine hydrochloride 0.2 MG/ML Injection",
+      "Nicardipine 40mg/200"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        229624
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "40165068",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "6-aminocaproic acid Injectable Solution [Amicar]",
+    "aliases": [
+      "6-aminocaproic acid Injectable Solution [Amicar]",
+      "Aminocaproic acid (Amicar)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        229058
+      ]
+    },
+    "unit": "grams",
+    "concept_id": "40001911",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "abciximab Injection [ReoPro]",
+    "aliases": [
+      "abciximab Injection [ReoPro]",
+      "Abciximab (Reopro)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        221261
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "46275863",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "acetaminophen Injection",
+    "aliases": [
+      "acetaminophen Injection",
+      "Acetaminophen-IV"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        228315
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "40220874",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "acetylcysteine Injection",
+    "aliases": [
+      "acetylcysteine Injection",
+      "Acetylcysteine"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        229057
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "35606334",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "acyclovir Oral Solution",
+    "aliases": [
+      "acyclovir Oral Solution",
+      "Acyclovir"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225837
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "40145265",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "adenosine Injection",
+    "aliases": [
+      "adenosine Injection",
+      "Adenosine"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        221282
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "46234159",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "alteplase Injection",
+    "aliases": [
+      "alteplase Injection",
+      "Alteplase (TPA)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        221319
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "40220959",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "amikacin Injection",
+    "aliases": [
+      "amikacin Injection",
+      "Amikacin"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225840
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "35606018",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "aminophylline Injection",
+    "aliases": [
+      "aminophylline Injection",
+      "Aminophylline"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        221342
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "35603807",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "amiodarone hydrochloride 1.2 MG/ML Injectable Solution",
+    "aliases": [
+      "amiodarone hydrochloride 1.2 MG/ML Injectable Solution",
+      "Amiodarone 600/500"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        228339
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "19135750",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "amiodarone Injection",
+    "aliases": [
+      "amiodarone Injection",
+      "Amiodarone",
+      "Amiodarone 450/250"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        221347,
+        229654
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "46276332",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "amphotericin B Injection [AmBisome]",
+    "aliases": [
+      "amphotericin B Injection [AmBisome]",
+      "Ambisome"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225838
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "37499293",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "ampicillin / sulbactam Injection [Unasyn]",
+    "aliases": [
+      "ampicillin / sulbactam Injection [Unasyn]",
+      "Ampicillin/Sulbactam (Unasyn)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225843
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "46275618",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "ampicillin Injection",
+    "aliases": [
+      "ampicillin Injection",
+      "Ampicillin"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225842
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "35605339",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "angiotensin II Injection [Giapreza]",
+    "aliases": [
+      "angiotensin II Injection [Giapreza]",
+      "Angiotensin II (Giapreza)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        229764,
+        229709
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "963895",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "argatroban Injection",
+    "aliases": [
+      "argatroban Injection",
+      "Argatroban"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225147
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "40220924",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "atovaquone Oral Suspension",
+    "aliases": [
+      "atovaquone Oral Suspension",
+      "Atovaquone"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225844
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "40095265",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "atropine Injection",
+    "aliases": [
+      "atropine Injection",
+      "Atropine"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        221393
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "46287614",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "azithromycin Injection",
+    "aliases": [
+      "azithromycin Injection",
+      "Azithromycin"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225845
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "35603388",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "aztreonam Injection",
+    "aliases": [
+      "aztreonam Injection",
+      "Aztreonam"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225847
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "46287306",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "bivalirudin Injection [Angiomax]",
+    "aliases": [
+      "bivalirudin Injection [Angiomax]",
+      "Bivalirudin (Angiomax)",
+      "Bivalirudin (Angiomax) (Impella)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225148,
+        229781
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "46275132",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "bumetanide Injectable Solution [Bumex]",
+    "aliases": [
+      "bumetanide Injectable Solution [Bumex]",
+      "Bumetanide (Bumex)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        229639
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "40014780",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "calcium chloride Injection",
+    "aliases": [
+      "calcium chloride Injection",
+      "Calcium Chloride"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        229618
+      ]
+    },
+    "unit": "grams",
+    "concept_id": "1593790",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "calcium gluconate Injection",
+    "aliases": [
+      "calcium gluconate Injection",
+      "Calcium Gluconate",
+      "Calcium Gluconate (CRRT)",
+      "Calcium Gluconate (Bolus)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        221456,
+        227525,
+        229640
+      ]
+    },
+    "unit": "grams",
+    "concept_id": "35603394",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "caspofungin Injection",
+    "aliases": [
+      "caspofungin Injection",
+      "Caspofungin"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225848
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "35606496",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "cefazolin Injection",
+    "aliases": [
+      "cefazolin Injection",
+      "Cefazolin"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225850
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "46287337",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "cefepime Injection",
+    "aliases": [
+      "cefepime Injection",
+      "Cefepime"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225851
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "46287348",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "ceftaroline fosamil Injection",
+    "aliases": [
+      "ceftaroline fosamil Injection",
+      "Ceftaroline"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        229587
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "35606420",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "ceftazidime Injection",
+    "aliases": [
+      "ceftazidime Injection",
+      "Ceftazidime"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225853
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "46275510",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "ceftriaxone Injection",
+    "aliases": [
+      "ceftriaxone Injection",
+      "Ceftriaxone"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225855
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "46287316",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "cephalexin Oral Suspension [Keflex]",
+    "aliases": [
+      "cephalexin Oral Suspension [Keflex]",
+      "Keflex"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        227691
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "40021312",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "cilastatin / imipenem Injection",
+    "aliases": [
+      "cilastatin / imipenem Injection",
+      "Imipenem/Cilastatin"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225876
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "35604058",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "ciprofloxacin Injection",
+    "aliases": [
+      "ciprofloxacin Injection",
+      "Ciprofloxacin"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225859
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "46287381",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "cisatracurium Injection",
+    "aliases": [
+      "cisatracurium Injection",
+      "Cisatracurium"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        221555
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "35605392",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "Citric Acid 0.038 MEQ/ML / Glucose 24.5 MG/ML / sodium citrate 0.0748 MEQ/ML Injectable Solution",
+    "aliases": [
+      "Citric Acid 0.038 MEQ/ML / Glucose 24.5 MG/ML / sodium citrate 0.0748 MEQ/ML Injectable Solution",
+      "ACD-A Citrate (1000ml)",
+      "ACD-A Citrate (500ml)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        227529,
+        227528
+      ]
+    },
+    "unit": "ml",
+    "concept_id": "43531812",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "clevidipine Injection [Cleviprex]",
+    "aliases": [
+      "clevidipine Injection [Cleviprex]",
+      "Clevidipine (Cleviprex)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        229234
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "42629415",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "clindamycin Oral Solution",
+    "aliases": [
+      "clindamycin Oral Solution",
+      "Clindamycin"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225860
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "40108857",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "colistin Injectable Solution",
+    "aliases": [
+      "colistin Injectable Solution",
+      "Colistin"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225862
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "40241491",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "cyclosporine Injection",
+    "aliases": [
+      "cyclosporine Injection",
+      "Cyclosporine"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        227534
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "35606027",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "daptomycin Injection",
+    "aliases": [
+      "daptomycin Injection",
+      "Daptomycin"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225863
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "35605612",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "dexmedetomidine Injection [Precedex]",
+    "aliases": [
+      "dexmedetomidine Injection [Precedex]",
+      "Dexmedetomidine (Precedex)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        229420,
+        225150
+      ]
+    },
+    "unit": "mcg",
+    "concept_id": "35603038",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "diazepam Injectable Solution [Valium]",
+    "aliases": [
+      "diazepam Injectable Solution [Valium]",
+      "Diazepam (Valium)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        221623
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "40035912",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "digoxin Injection [Lanoxin]",
+    "aliases": [
+      "digoxin Injection [Lanoxin]",
+      "Digoxin (Lanoxin)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        229069
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "35606376",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "diltiazem Injection",
+    "aliases": [
+      "diltiazem Injection",
+      "Diltiazem"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        221468
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "42629594",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "dobutamine Injection",
+    "aliases": [
+      "dobutamine Injection",
+      "Dobutamine"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        221653
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "1719036",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "dopamine Injection",
+    "aliases": [
+      "dopamine Injection",
+      "Dopamine"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        221662
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "35606558",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "doxycycline Injection",
+    "aliases": [
+      "doxycycline Injection",
+      "Doxycycline"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225865
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "46233979",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "drotrecogin alfa Injectable Solution [Xigris]",
+    "aliases": [
+      "drotrecogin alfa Injectable Solution [Xigris]",
+      "Drotrecogin (Xigris)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        221689
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "40058299",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "enoxaparin Injectable Solution [Lovenox]",
+    "aliases": [
+      "enoxaparin Injectable Solution [Lovenox]",
+      "Enoxaparin (Lovenox)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225906
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "40042753",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "epinephrine Injection",
+    "aliases": [
+      "epinephrine Injection",
+      "Epinephrine",
+      "Epinephrine."
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        221289,
+        229617
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "46275915",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "epoprostenol Injection [Veletri]",
+    "aliases": [
+      "epoprostenol Injection [Veletri]",
+      "Epoprostenol (Veletri)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        229760
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "42629311",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "eptifibatide Injection [Integrilin]",
+    "aliases": [
+      "eptifibatide Injection [Integrilin]",
+      "Eptifibatide (Integrilin)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225151
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "35603861",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "ertapenem Injection [Invanz]",
+    "aliases": [
+      "ertapenem Injection [Invanz]",
+      "Ertapenem sodium (Invanz)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        229061
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "35606490",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "erythromycin Injection",
+    "aliases": [
+      "erythromycin Injection",
+      "Erythromycin"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225866
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "35603399",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "esmolol Injection",
+    "aliases": [
+      "esmolol Injection",
+      "Esmolol"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        221429
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "35603869",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "esomeprazole Injection [Nexium]",
+    "aliases": [
+      "esomeprazole Injection [Nexium]",
+      "Esomeprazole (Nexium)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        229615
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "35604682",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "ethambutol Oral Solution",
+    "aliases": [
+      "ethambutol Oral Solution",
+      "Ethambutol"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225868
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "40147904",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "famotidine Injectable Solution [Pepcid]",
+    "aliases": [
+      "famotidine Injectable Solution [Pepcid]",
+      "Famotidine (Pepcid)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225907
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "40036961",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "fentanyl Injection",
+    "aliases": [
+      "fentanyl Injection",
+      "Fentanyl",
+      "Fentanyl (Concentrate)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        221744,
+        225942
+      ]
+    },
+    "unit": "mcg",
+    "concept_id": "35603427",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "fluconazole Oral Solution",
+    "aliases": [
+      "fluconazole Oral Solution",
+      "Fluconazole"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225869
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "40147994",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "folic acid Injectable Solution",
+    "aliases": [
+      "folic acid Injectable Solution",
+      "Folic Acid"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225832
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "40131910",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "fondaparinux Prefilled Syringe",
+    "aliases": [
+      "fondaparinux Prefilled Syringe",
+      "Fondaparinux"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225908
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "40141704",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "foscarnet Injection",
+    "aliases": [
+      "foscarnet Injection",
+      "Foscarnet"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225871
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "35606300",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "fosphenytoin Injection",
+    "aliases": [
+      "fosphenytoin Injection",
+      "Fosphenytoin"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        227690
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "35602746",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "furosemide 50 MG/ML Injectable Solution",
+    "aliases": [
+      "furosemide 50 MG/ML Injectable Solution",
+      "Furosemide (Lasix) 250/50"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        228340
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "19027327",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "furosemide Injectable Solution [Lasix]",
+    "aliases": [
+      "furosemide Injectable Solution [Lasix]",
+      "Furosemide (Lasix)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        221794
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "40040332",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "ganciclovir Injection",
+    "aliases": [
+      "ganciclovir Injection",
+      "Gancyclovir"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225873
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "35605861",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "gentamicin Injection",
+    "aliases": [
+      "gentamicin Injection",
+      "Gentamicin"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225875
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "1594391",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "glycopyrronium Injection [Robinul]",
+    "aliases": [
+      "glycopyrronium Injection [Robinul]",
+      "Glycopyrolate (Robinul)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        229070
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "35605662",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "haloperidol Injection [Haldol]",
+    "aliases": [
+      "haloperidol Injection [Haldol]",
+      "Haloperidol (Haldol)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        221824
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "35603242",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "heparin Injection",
+    "aliases": [
+      "heparin Injection",
+      "Heparin Sodium (Prophylaxis)",
+      "Heparin Sodium",
+      "Heparin Sodium (Impella)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225975,
+        225152,
+        229597
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "1718457",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "hydralazine Injection",
+    "aliases": [
+      "hydralazine Injection",
+      "Hydralazine"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        221828
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "1592857",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "hydrochloric acid Injectable Solution",
+    "aliases": [
+      "hydrochloric acid Injectable Solution",
+      "Hydrochloric Acid - HCL"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225167
+      ]
+    },
+    "unit": "mEq",
+    "concept_id": "40044812",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "hydromorphone Injection [Dilaudid]",
+    "aliases": [
+      "hydromorphone Injection [Dilaudid]",
+      "Hydromorphone (Dilaudid)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        221833
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "35603598",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "insulin aspart, human Injectable Solution [NovoLog]",
+    "aliases": [
+      "insulin aspart, human Injectable Solution [NovoLog]",
+      "Insulin - Novolog"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        229299
+      ]
+    },
+    "unit": "units",
+    "concept_id": "40051316",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "insulin glargine Injectable Solution",
+    "aliases": [
+      "insulin glargine Injectable Solution",
+      "Insulin - Glargine"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        223260
+      ]
+    },
+    "unit": "units",
+    "concept_id": "40051347",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "insulin isophane / insulin, regular, human Injectable Suspension",
+    "aliases": [
+      "insulin isophane / insulin, regular, human Injectable Suspension",
+      "Insulin - 70/30"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        223257
+      ]
+    },
+    "unit": "units",
+    "concept_id": "40051377",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "insulin isophane Injectable Suspension",
+    "aliases": [
+      "insulin isophane Injectable Suspension",
+      "Insulin - NPH"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        223259
+      ]
+    },
+    "unit": "units",
+    "concept_id": "40051363",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "insulin lispro / insulin lispro protamine, human Injectable Suspension [Humalog Mix]",
+    "aliases": [
+      "insulin lispro / insulin lispro protamine, human Injectable Suspension [Humalog Mix]",
+      "Insulin - Humalog 75/25"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        223261
+      ]
+    },
+    "unit": "units",
+    "concept_id": "40143226",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "insulin lispro Injectable Solution [Humalog]",
+    "aliases": [
+      "insulin lispro Injectable Solution [Humalog]",
+      "Insulin - Humalog"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        223262
+      ]
+    },
+    "unit": "units",
+    "concept_id": "40166275",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "insulin, regular, human Injectable Solution [Humulin R]",
+    "aliases": [
+      "insulin, regular, human Injectable Solution [Humulin R]",
+      "Insulin - U500"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        229619
+      ]
+    },
+    "unit": "units",
+    "concept_id": "40052771",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "insulin, regular, human Injection",
+    "aliases": [
+      "insulin, regular, human Injection",
+      "Insulin - Regular"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        223258
+      ]
+    },
+    "unit": "units",
+    "concept_id": "1361259",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "isoniazid Oral Solution",
+    "aliases": [
+      "isoniazid Oral Solution",
+      "Isoniazid"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225877
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "40050638",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "isoproterenol Injection [Isuprel]",
+    "aliases": [
+      "isoproterenol Injection [Isuprel]",
+      "Isuprel"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        227692
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "35603336",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "ketamine Injectable Solution",
+    "aliases": [
+      "ketamine Injectable Solution",
+      "Ketamine"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        221712
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "40054021",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "ketorolac Injectable Solution [Toradol]",
+    "aliases": [
+      "ketorolac Injectable Solution [Toradol]",
+      "Ketorolac (Toradol)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        229072
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "40048832",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "labetalol Injection",
+    "aliases": [
+      "labetalol Injection",
+      "Labetalol"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225153
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "739771",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "lansoprazole Injectable Solution [Prevacid]",
+    "aliases": [
+      "lansoprazole Injectable Solution [Prevacid]",
+      "Lansoprazole (Prevacid)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225909
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "40123804",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "lepirudin Injectable Solution",
+    "aliases": [
+      "lepirudin Injectable Solution",
+      "Lepirudin"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        221892
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "40058579",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "levetiracetam Injection [Keppra]",
+    "aliases": [
+      "levetiracetam Injection [Keppra]",
+      "Levetiracetam (Keppra)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        228316
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "42629457",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "levofloxacin Injection",
+    "aliases": [
+      "levofloxacin Injection",
+      "Levofloxacin"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225879
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "46287433",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "lidocaine Injection",
+    "aliases": [
+      "lidocaine Injection",
+      "Lidocaine"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225945
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "35604127",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "linezolid Oral Solution",
+    "aliases": [
+      "linezolid Oral Solution",
+      "Linezolid"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225881
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "40123934",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "lorazepam Injection [Ativan]",
+    "aliases": [
+      "lorazepam Injection [Ativan]",
+      "Lorazepam (Ativan)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        221385
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "46287373",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "magnesium sulfate Injection",
+    "aliases": [
+      "magnesium sulfate Injection",
+      "Magnesium Sulfate",
+      "Magnesium Sulfate (Bolus)",
+      "Magnesium Sulfate (OB-GYN)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        222011,
+        227523,
+        227524
+      ]
+    },
+    "unit": "grams",
+    "concept_id": "46275855",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "mannitol Injection",
+    "aliases": [
+      "mannitol Injection",
+      "Mannitol"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        227531
+      ]
+    },
+    "unit": "grams",
+    "concept_id": "42628878",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "meperidine Injection [Demerol]",
+    "aliases": [
+      "meperidine Injection [Demerol]",
+      "Meperidine (Demerol)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225973
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "46287468",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "meropenem Injection",
+    "aliases": [
+      "meropenem Injection",
+      "Meropenem"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225883
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "35606000",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "methadone Injectable Solution",
+    "aliases": [
+      "methadone Injectable Solution",
+      "Methadone Hydrochloride"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        227520
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "40063779",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "metoprolol Injection",
+    "aliases": [
+      "metoprolol Injection",
+      "Metoprolol"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225974
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "35605509",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "metronidazole Injection",
+    "aliases": [
+      "metronidazole Injection",
+      "Metronidazole"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225884
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "1592855",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "micafungin Injection",
+    "aliases": [
+      "micafungin Injection",
+      "Micafungin"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225885
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "35606010",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "midazolam Injectable Solution [Versed]",
+    "aliases": [
+      "midazolam Injectable Solution [Versed]",
+      "Midazolam (Versed)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        221668
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "40064208",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "milrinone Injection",
+    "aliases": [
+      "milrinone Injection",
+      "Milrinone"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        221986
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "42628988",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "morphine Injection",
+    "aliases": [
+      "morphine Injection",
+      "Morphine Sulfate"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225154
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "35604830",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "moxifloxacin Injection",
+    "aliases": [
+      "moxifloxacin Injection",
+      "Moxifloxacin"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225886
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "46287377",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "mycophenolate mofetil Injection [Cellcept]",
+    "aliases": [
+      "mycophenolate mofetil Injection [Cellcept]",
+      "Mycophenolate mofetil (Cellcept)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        229062
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "35604047",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "nafcillin Injection",
+    "aliases": [
+      "nafcillin Injection",
+      "Nafcillin"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225888
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "35605335",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "naloxone Injectable Solution [Narcan]",
+    "aliases": [
+      "naloxone Injectable Solution [Narcan]",
+      "Naloxone (Narcan)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        222021
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "40063502",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "neostigmine Injectable Solution [Prostigmin]",
+    "aliases": [
+      "neostigmine Injectable Solution [Prostigmin]",
+      "Neostigmine (Prostigmin)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        229071
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "40072349",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "nesiritide Injection",
+    "aliases": [
+      "nesiritide Injection",
+      "Nesiritide"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        222037
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "35604555",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "nicardipine Injection",
+    "aliases": [
+      "nicardipine Injection",
+      "Nicardipine"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        222042
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "42628857",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "nitroglycerin Injection",
+    "aliases": [
+      "nitroglycerin Injection",
+      "Nitroglycerin"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        222056
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "1593968",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "nitroprusside Injection",
+    "aliases": [
+      "nitroprusside Injection",
+      "Nitroprusside"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        222051
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "46287576",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "norepinephrine Injection",
+    "aliases": [
+      "norepinephrine Injection",
+      "Norepinephrine"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        221906
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "35603731",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "octreotide Injection",
+    "aliases": [
+      "octreotide Injection",
+      "Octreotide"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225155
+      ]
+    },
+    "unit": "mcg",
+    "concept_id": "46234192",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "omeprazole Injectable Solution",
+    "aliases": [
+      "omeprazole Injectable Solution",
+      "Omeprazole (Prilosec)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        227694
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "40069724",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "ondansetron Injectable Solution [Zofran]",
+    "aliases": [
+      "ondansetron Injectable Solution [Zofran]",
+      "Ondansetron (Zofran)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        229616
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "40070101",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "oseltamivir Oral Suspension [Tamiflu]",
+    "aliases": [
+      "oseltamivir Oral Suspension [Tamiflu]",
+      "Tamiflu"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        228003
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "40126825",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "pamidronate Injection",
+    "aliases": [
+      "pamidronate Injection",
+      "Pamidronate"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        229063
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "35604142",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "pantoprazole Injection [Protonix]",
+    "aliases": [
+      "pantoprazole Injection [Protonix]",
+      "Pantoprazole (Protonix)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225910
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "35604332",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "penicillin G Oral Solution",
+    "aliases": [
+      "penicillin G Oral Solution",
+      "Penicillin G potassium"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225890
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "40072614",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "pentobarbital Injectable Solution",
+    "aliases": [
+      "pentobarbital Injectable Solution",
+      "Pentobarbital"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225156
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "40067571",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "phenylephrine Injectable Solution",
+    "aliases": [
+      "phenylephrine Injectable Solution",
+      "Phenylephrine (50/250)",
+      "Phenylephrine (200/250)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        229630,
+        229632
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "40074086",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "phenylephrine Injection",
+    "aliases": [
+      "phenylephrine Injection",
+      "Phenylephrine"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        221749
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "46287544",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "phenytoin Injection",
+    "aliases": [
+      "phenytoin Injection",
+      "Dilantin"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        227689
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "35602774",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "piperacillin / tazobactam Injection [Zosyn]",
+    "aliases": [
+      "piperacillin / tazobactam Injection [Zosyn]",
+      "Piperacillin/Tazobactam (Zosyn)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225893
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "46275429",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "piperacillin Injectable Solution",
+    "aliases": [
+      "piperacillin Injectable Solution",
+      "Piperacillin"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225892
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "40077149",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "potassium chloride Injection",
+    "aliases": [
+      "potassium chloride Injection",
+      "Potassium Chloride",
+      "KCL (Bolus)",
+      "KCl (CRRT)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225166,
+        227522,
+        227536
+      ]
+    },
+    "unit": "mEq",
+    "concept_id": "1718692",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "potassium phosphate Injectable Solution",
+    "aliases": [
+      "potassium phosphate Injectable Solution",
+      "K Phos"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225834
+      ]
+    },
+    "unit": "mmol",
+    "concept_id": "40101380",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "procainamide Injectable Solution",
+    "aliases": [
+      "procainamide Injectable Solution",
+      "Procainamide"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        222151
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "40074327",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "propofol Injection",
+    "aliases": [
+      "propofol Injection",
+      "Propofol"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        222168
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "40220385",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "protamine sulfate (USP) Injection",
+    "aliases": [
+      "protamine sulfate (USP) Injection",
+      "Protamine sulfate"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        229068
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "36249933",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "pyrazinamide Oral Suspension",
+    "aliases": [
+      "pyrazinamide Oral Suspension",
+      "Pyrazinamide"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225895
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "40075134",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "quinine Oral Tablet",
+    "aliases": [
+      "quinine Oral Tablet",
+      "Quinine"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225896
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "40076683",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "ranitidine Injection",
+    "aliases": [
+      "ranitidine Injection",
+      "Ranitidine (Prophylaxis)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225911
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "1718654",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "rifampin Oral Solution",
+    "aliases": [
+      "rifampin Oral Solution",
+      "Rifampin"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225898
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "40079870",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "rocuronium Injectable Solution",
+    "aliases": [
+      "rocuronium Injectable Solution",
+      "Rocuronium"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        229233
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "40080661",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "sodium acetate Injection",
+    "aliases": [
+      "sodium acetate Injection",
+      "Sodium Acetate."
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        229861
+      ]
+    },
+    "unit": "mEq",
+    "concept_id": "1718645",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "sodium bicarbonate 84 MG/ML Injection",
+    "aliases": [
+      "sodium bicarbonate 84 MG/ML Injection",
+      "Sodium Bicarbonate 8.4%"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        220995
+      ]
+    },
+    "unit": "mEq",
+    "concept_id": "1593967",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "sodium citrate Injectable Solution",
+    "aliases": [
+      "sodium citrate Injectable Solution",
+      "Citrate"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        227526
+      ]
+    },
+    "unit": "mmol",
+    "concept_id": "40100890",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "sodium phosphate, dibasic / sodium phosphate, monobasic Injection",
+    "aliases": [
+      "sodium phosphate, dibasic / sodium phosphate, monobasic Injection",
+      "Na Phos"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225835
+      ]
+    },
+    "unit": "mmol",
+    "concept_id": "1592538",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "sucralfate Oral Suspension [Carafate]",
+    "aliases": [
+      "sucralfate Oral Suspension [Carafate]",
+      "Carafate (Sucralfate)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225912
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "40080152",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "sulfamethoxazole / trimethoprim Oral Suspension [Bactrim]",
+    "aliases": [
+      "sulfamethoxazole / trimethoprim Oral Suspension [Bactrim]",
+      "Bactrim (SMX/TMP)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225899
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "40160705",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "thiamine Injectable Solution",
+    "aliases": [
+      "thiamine Injectable Solution",
+      "Thiamine"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225833
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "40091031",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "tigecycline Injection",
+    "aliases": [
+      "tigecycline Injection",
+      "Tigecycline"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        229064
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "35603621",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "tirofiban Injection [Aggrastat]",
+    "aliases": [
+      "tirofiban Injection [Aggrastat]",
+      "Tirofiban (Aggrastat)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225157
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "35604303",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "tobramycin Injection",
+    "aliases": [
+      "tobramycin Injection",
+      "Tobramycin"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225902
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "35605484",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "treprostinil Injectable Solution [Remodulin]",
+    "aliases": [
+      "treprostinil Injectable Solution [Remodulin]",
+      "Treprostinil (Remodulin)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        229066
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "40090705",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "valganciclovir Oral Solution",
+    "aliases": [
+      "valganciclovir Oral Solution",
+      "Valgancyclovir"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225903
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "40166694",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "vancomycin Oral Solution",
+    "aliases": [
+      "vancomycin Oral Solution",
+      "Vancomycin"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225798
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "40087256",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "vasopressin (USP) Injection",
+    "aliases": [
+      "vasopressin (USP) Injection",
+      "Vasopressin"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        222315
+      ]
+    },
+    "unit": "units",
+    "concept_id": "35201749",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "vecuronium Injection",
+    "aliases": [
+      "vecuronium Injection",
+      "Vecuronium"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        222062
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "37498071",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "verapamil Injection",
+    "aliases": [
+      "verapamil Injection",
+      "Verapamil"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        222318
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "46287341",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "vitamin K Injectable Solution",
+    "aliases": [
+      "vitamin K Injectable Solution",
+      "Vitamin K (Phytonadione)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        227535
+      ]
+    },
+    "unit": "mg",
+    "concept_id": "40092695",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "voriconazole Injection",
+    "aliases": [
+      "voriconazole Injection",
+      "Voriconazole"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225905
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "35604631",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  },
+  {
+    "canonical": "warfarin Injectable Solution [Coumadin]",
+    "aliases": [
+      "warfarin Injectable Solution [Coumadin]",
+      "Coumadin (Warfarin)"
+    ],
+    "domain": "Drug",
+    "db_filter": {
+      "table": "inputevents",
+      "column": "itemid",
+      "operator": "IN",
+      "values": [
+        225913
+      ]
+    },
+    "unit": "dose",
+    "concept_id": "40093131",
+    "notes": "source=mapping/inputevents_to_rxnorm.csv"
+  }
+]

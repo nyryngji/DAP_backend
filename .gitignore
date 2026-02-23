@@ -1,0 +1,6 @@
+.env
+/.venv
+mimic_query_data/mimic_iv
+*.csv
+for_insert_db/
+modeler/

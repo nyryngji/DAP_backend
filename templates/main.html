@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- 사이드바     -->
+    <div class="wrap">
+        <div class="sidebar">   
+            <div class="sidebar-header">
+                <img src="{{ url_for('static', filename='image/dap_only_logo.png') }}" />
+                <div class="logo-text">
+                    <div class="logo-title">DAP</div>
+                    <div class="logo-subtitle">Data Access Platform</div>
+                </div>
+            </div>
+
+            {% if user_info.ADMIN_ROLE != "SYSTEM" %}
+                <ul class="sidebar-links">
+                    <div class="menu-title">메뉴</div>
+
+                    {% set is_active = request.endpoint == 'new_chat' %}
+                    {% set icon_color = '047857' if is_active else '000000' %}
+
+                    <li class="menu-item" id="new_chat" data-session-id="{{ chat_session_id }}">
+                        <a href="{{ url_for('new_chat') }}" style="text-decoration:none; color:inherit;">
+                            <img src="https://img.icons8.com/?size=100&id=TA4QF-Vb1AiX&format=png&color={{ icon_color }}" />
+                            <span>새로운 채팅</span>
+                        </a>
+                    </li>
+
+                    {% set is_active = request.endpoint == 'view_favorite_page' %}
+                    {% set icon_color = '047857' if is_active else '000000' %}
+
+                    <li class="menu-item" id="favorite">
+                    
+                        <a href="{{ url_for('view_favorite_page') }}" style="text-decoration:none; color:inherit;">
+                            <img src="https://img.icons8.com/?size=100&id=43879&format=png&color={{ icon_color }}" />
+                            <span>즐겨찾기</span>
+                        </a>
+                    </li>
+                
+                    <br>
+                    
+                    <div class="menu-title">최근 기록</div>
+                    {% if user_chat_list %}
+                        {% for chat in user_chat_list %}
+                            <li class="menu-item">
+                                <a href="{{ url_for('view_already_chat_page', chat_session_id=chat.CHAT_SESSION_ID) }}">
+                                    <img src="https://img.icons8.com/?size=100&id=20106&format=png&color=000000" />
+                                    <span>{{ chat.QUESTION_TEXT }}</span>
+                                </a>
+                            </li>
+                        {% endfor %}
+                    {% endif %}
+                </ul>
+            {% else %}
+                <ul class="sidebar-links">
+                    <div class="menu-title">시스템 관리자 메뉴</div>
+                    {% set is_active = request.endpoint == 'view_system_log_page' %}
+                    {% set icon_color = '047857' if is_active else '000000' %}
+
+                    <li class="menu-item {% if is_active %}active{% endif %}">
+                        <a href="{{ url_for('view_system_log_page') }}">
+                            <img src="https://img.icons8.com/?size=100&id=CsbD6WKBWxtf&format=png&color={{ icon_color }}" />
+                            <span>시스템 로그</span>
+                        </a>
+                    </li>
+                    
+                    {% set is_active = request.endpoint == 'view_manage_role_page' %}
+                    {% set icon_color = '047857' if is_active else '000000' %}
+
+                    <li class="menu-item" id="manage_role">
+                        <a href="{{ url_for('view_manage_role_page') }}" style="text-decoration:none; color:inherit;">
+                            <img src="https://img.icons8.com/?size=100&id=6xyw5cLpMNLR&format=png&color={{ icon_color }}" />
+                            <span>권한 관리</span>
+                        </a>
+                    </li>
+                </ul>
+            {% endif %}
+            <div class="user-section">
+                <div class="user-info">
+
+                    {% if user_info.ADMIN_ROLE == "CLINICAL" %}
+                    <img class="user-icon"
+                        src="https://img.icons8.com/?size=100&id=9TmDmAtqEdVZ&format=png&color=000000">
+
+                    {% elif user_info.ADMIN_ROLE == "ADMINISTRATION" %}
+                    <img class="user-icon"
+                        src="https://img.icons8.com/?size=100&id=aFxfm4qI75vj&format=png&color=000000">
+
+                    {% elif user_info.ADMIN_ROLE == "RESEARCHER"%}
+                    <img class="user-icon"
+                        src="https://img.icons8.com/?size=100&id=Jy6voCYpThrR&format=png&color=000000">
+
+                    {% else %}
+                    <img class="user-icon"
+                        src="https://img.icons8.com/?size=100&id=vIvqEz5cC70m&format=png&color=000000">
+
+                    {% endif %}
+
+                    <div class="user-text">
+                    <div class="user-name">
+                        {{ user_info.USER_NAME }}
+                    </div>
+                    <div class="user-role">
+                        {{ user_info.ADMIN_ROLE }} Admin
+                    </div>
+                    </div>
+
+                </div>
+
+                <div class="logout-wrapper">
+                    <a href="/logout">
+                    <img class="logout-icon"
+                        src="https://img.icons8.com/?size=100&id=vGj0AluRnTSa&format=png&color=000000">
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        {% if user_info.ADMIN_ROLE != "SYSTEM" %}
+            <div class="main-content">
+                <!-- 만약 채팅이 있으면 -->
+                {% if chat_blocks %}
+                <div class="yes_chat">
+                    <div class="chatting">
+                    {% for block in chat_blocks %}
+
+                    <div class="human-question">
+                        {{ block.question }}
+                    </div>
+                    <div class="llm-answer_include_retry">
+                        <div class="llm-answer">
+                            {% if block.answer %}
+                            <div class="llm-answer-char">
+                                {{ block.answer }}
+                            </div>
+                            {% endif %}
+
+                            {% if block.table %}
+                            <div class="llm-table">
+                                <table class="result-table">
+                                    <thead>
+                                        <tr>
+                                            {% for col in block.table.columns %}
+                                            <th>{{ col }}</th>
+                                            {% endfor %}
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for row in block.table.rows %}
+                                        <tr>
+                                            {% for value in row %}
+                                            <td>{{ value }}</td>
+                                            {% endfor %}
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+
+                                <button
+                                    class="detail-button"
+                                    data-url="{{ url_for('popup', answer_id=block.answer_id) }}"
+                                    onclick="openPopup(this.dataset.url)">
+                                    <img src="https://img.icons8.com/?size=100&id=98955&format=png&color=000000" />
+                                    자세히보기
+                                </button>
+                            </div>
+                            {% endif %}
+                        
+                        <a class="retry">
+                            <img src="https://img.icons8.com/?size=100&id=88634&format=png&color=999999"/>
+                        </a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    </div>
+
+                    <form class="chat-search-box" method="post">
+                        <img
+                        class="chat-search-icon"
+                        src="https://img.icons8.com/?size=100&id=7695&format=png&color=94A3BB"
+                        />
+                        <input type="text" placeholder="궁금한 것을 질문하세요" name="human_question"/>
+                        <button class="chat-search-button" type="submit">
+                        <img src="https://img.icons8.com/?size=100&id=deb0U2CNzMat&format=png&color=FFFFFF"/>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- 만약 즐겨찾기 누르면 -->
+                {% elif is_favorite %}
+                <form class="favorite_list" method="POST" action="{{ url_for('view_favorite_page') }}">
+                    <div class="fav-header">
+                        <h1 class="page-title">즐겨찾기</h1>
+                        <div class="header-actions">
+                            <button class="action-btn" type="button" onclick="toggleAllByButton()">
+                                <img 
+                                src="https://img.icons8.com/?size=100&id=924&format=png&color=000000" 
+                                alt="check" 
+                                style="width: 14px; height: 14px;" 
+                                />
+                                전체 선택
+                            </button>
+
+                            <button class="action-btn delete" type="submit">
+                                <img 
+                                src="https://img.icons8.com/?size=100&id=PziI2kHf4XFz&format=png&color=000000" 
+                                alt="delete" 
+                                style="width: 14px; height: 14px;" 
+                                />
+                                삭제
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="fav-container">
+                        <div class="tbody_style">
+                            <table class="fav-table">
+                            <thead>
+                                <tr>
+                                <th class="col-check">
+                                    <input type="checkbox" id="check-all" onchange="toggleAll(this.checked)" 
+                                    />
+                                </th> 
+                                <th class="col-content">질의 내용</th>
+                                <th class="col-date">실행 시간</th>
+                                </tr>
+                            </thead>
+                            
+                            {% if fav_list %}
+                            <tbody>
+                                {% for fav_info in fav_list %}
+                                <tr>
+                                    <td class="col-check"><input type="checkbox" name="fav_ids" value="{{ fav_info.SAVED_QUERY_ID }}"/></td>
+                                    <td class="col-content">
+                                        <div class="content-wrapper">
+                                            <span>
+                                                <a href="{{ url_for('popup', answer_id=fav_info.QUESTION_ID) }}" class="fav_popup">{{ fav_info.TITLE }}</a>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="col-date">{{ fav_info.CREATED_AT }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                            {% endif %}
+                            
+                            </table>
+                        </div>
+
+                        <div class="pagination-footer">
+                            <div class="page-info">전체 {{ total_list }}건</div>
+                            <div class="pagination-controls">
+                                <div class="pagination-controls">
+                                    <!-- 이전 -->
+                                    <a class="page-btn prev {% if page == 1 %}disabled{% endif %}"
+                                    href="?page={{ page - 1 }}">
+                                        &lt;
+                                    </a>
+
+                                    <!-- 페이지 번호 -->
+                                    {% for p in range(1, total_pages + 1) %}
+                                        <a class="page-btn {% if p == page %}active{% endif %}"
+                                        href="?page={{ p }}">
+                                            {{ p }}
+                                        </a>
+                                    {% endfor %}
+
+                                    <!-- 다음 -->
+                                    <a class="page-btn next {% if page == total_pages %}disabled{% endif %}"
+                                    href="?page={{ page + 1 }}">
+                                        &gt;
+                                    </a>
+                                                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- 만약 채팅창이나 다른 것으로 바뀌면 -->
+                {% else %}
+                <div class="no_chat">
+                    <div class="center-area">
+                        <!-- 중앙 아이콘 -->
+                        <div class="hero-icon">
+                            <img src="{{ url_for('static', filename='image/dap_only_logo.png') }}"/>
+                        </div>
+
+                        <!-- 설명 문구 -->
+                        <div class="hero-text">
+                            일상적인 언어로 복잡한 의료 데이터베이스를 조회할 수 있도록 지원합니다
+                        </div>
+
+                        <!-- 검색바 -->
+                        <form class="search-box" method="post">
+                            <img
+                            class="search-icon"
+                            src="https://img.icons8.com/?size=100&id=7695&format=png&color=94A3BB"
+                            />
+                            <input type="text" placeholder="궁금한 것을 질문하세요" name="human_question"/>
+                            <button class="search-button" type="submit">
+                            <img src="https://img.icons8.com/?size=100&id=deb0U2CNzMat&format=png&color=000000"/>
+                            </button>
+                        </form>
+
+                        <!-- 예시 질문 -->
+                        <div class="suggestion-area">
+                            <span>다음과 같은 것을 찾을 수 있습니다:</span>
+
+                            <button class="suggestion-chip">
+                            평균 ICU 재원일 수
+                            </button>
+
+                            <button class="suggestion-chip">
+                            월별 환자 수
+                            </button>
+
+                            <button class="suggestion-chip">
+                            나이대별 ICU 환자 분포
+                            </button>
+                        </div>
+
+                        <!-- 하단 보안 안내 -->
+                        <div class="feature-area">
+
+                            <div class="feature-item">
+                            <div class="feature-icon">
+                            <img src="https://img.icons8.com/?size=100&id=94&format=png&color=059669" />
+                            </div>
+                            <div class="feature-title">Secure Processing</div>
+                            <div class="feature-desc">
+                            국제 의료 보안 기준을 준수하며<br />
+                            데이터는 안전한 환경 내에서만 처리됩니다.
+                            </div>
+                        </div>
+
+                            <div class="feature-item">
+                            <div class="feature-icon">
+                            <img src="https://img.icons8.com/?size=100&id=96151&format=png&color=059669" />
+                            </div>
+                            <div class="feature-title">Secure Processing</div>
+                            <div class="feature-desc">
+                            개인정보는 자동으로 감지되어<br />
+                                결과에서 마스킹됩니다.
+                            </div>
+                        </div>
+                    
+                            <div class="feature-item">
+                            <div class="feature-icon">
+                            <img src="https://img.icons8.com/?size=100&id=iWXaTX0OHmpB&format=png&color=059669" />
+                            </div>
+                            <div class="feature-title">Secure Processing</div>
+                            <div class="feature-desc">
+                            시스템은 조회 전용으로 동작하여<br />
+                                데이터 변경을 방지합니다.
+                            </div>
+                        </div>
+                        </div>
+
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+
+        {% else %}
+            <div class="main-content">
+            {% if system_loc %}
+                <div class="system_log_dashboard">
+                    <div class="content-header">
+                        <h1 class="page-title">시스템 모니터링</h1>
+                        <!-- <div class="header-actions">
+                        <button class="btn btn-green">⬇ 다운로드</button>
+                        </div> -->
+                    </div>
+
+                    <div class="dashboard-grid">
+                        <div class="metrics-column">
+            
+                        <div class="card metric-card">
+                            <div class="card-label">전체 쿼리 수</div>
+                            <div class="metric-right">
+                            <div class="card-value">{{ "{:,}".format(latest_query_count) }}</div>
+                            <div class="card-trend up">
+                                <span>{{ query_count_per }}% 상승</span>
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class="card metric-card">
+                            <div class="card-label">평균 생성 시간</div>
+                            <div class="metric-right">
+                            <div class="card-value">{{ latest_avg_query_time }}s</div>
+                            <div class="card-trend down">
+                                <span>{{ avg_query_time_per | abs }}초 
+                                    {% if avg_query_time_per > 0 %}
+                                        감소
+                                    {% else %}
+                                        증가
+                                    {% endif %}
+                                </span>
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class="card metric-card">
+                            <div class="card-label">CPU 사용률</div>
+                            <div class="metric-right">       
+                            <div class="card-value">{{ cpu_use }}%</div>
+                            <div class="card-trend down">
+                                <span>{{ cpu_use_diff }}% 감소</span>
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class="card metric-card">
+                            <div class="card-label">Slow Query (≥30s)</div>
+                            <div class="metric-right">       
+                            <div class="card-value">{{ slow_query_count }}건</div>
+                            <div class="card-trend down">
+                                <span>{{ slow_query_diff | abs }}건
+                                    {% if slow_query_diff > 0 %}
+                                        증가
+                                    {% else %}
+                                        감소
+                                    {% endif %}
+                                </span>
+                            </div>
+                            </div>
+                        </div>
+
+                        </div>
+
+                        <div class="card chart-card">
+                        <div class="chart-header">
+                            <div class="chart-title-group">
+                            <span class="card-label">쿼리 요청량 추이</span>
+                            <div class="chart-value-row">
+                                <span class="chart-big-value">1,420/hr</span>
+                                <span class="chart-sub-text">최대 사용량</span>
+                            </div>
+                            </div>
+                        </div>
+                        
+                
+                        {% if query_graph_html %}
+                        <div class="chart-container">
+                            {{ query_graph_html | safe }}
+                        </div>
+                        {% endif %}
+                   
+
+                        <!-- <div class="chart-labels">
+                            <span>08:00</span><span>12:00</span><span>16:00</span><span>20:00</span><span>00:00</span>
+                        </div> -->
+                        </div>
+                    </div>
+                    
+                    <div class="card table-card">               
+                        <h1 class="page-title2">최근 1시간 동안 가장 오래 걸린 쿼리 top 5</h1>         
+                        <div class="table-wrapper">
+                        <table class="fav-table">
+                            <thead>
+                            <tr>
+                                <th width="45%">SESSION ID</th>
+                                <th width="15%">QUERY ID</th>
+                                <th width="25%">생성 시간</th>
+                                <th width="15%">실행 시간</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for row in top_5_query_rows %}
+                                <tr>
+                                    {% for cell in row %}
+                                        <td>{{ cell }}</td>
+                                    {% endfor %}
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                        </div>
+
+                       
+                    </div>
+                </div>
+            {% else %}
+                <div class="manage_role_dashboard">
+                    <h2>사용자 권한 관리</h2>
+                    <div class="table_all_cover">
+                    <form class="role-container" method="post" action="{{ url_for('view_manage_role_page') }}">
+                        <button
+                            type="submit"
+                            class="choose_user_role {% if role == 'CLINICAL' %}is-active{% endif %}"
+                            name="role"
+                            value="CLINICAL"
+                            aria-selected="{{ 'true' if role == 'CLINICAL' else 'false' }}"
+                        >
+                            의사 (Doctor)
+                        </button>
+
+                        <button
+                            type="submit"
+                            class="choose_user_role {% if role == 'RESEARCHER' %}is-active{% endif %}"
+                            name="role"
+                            value="RESEARCHER"
+                            aria-selected="{{ 'true' if role == 'RESEARCHER' else 'false' }}"
+                        >
+                            연구원 (Researcher)
+                        </button>
+
+                        <button
+                            type="submit"
+                            class="choose_user_role {% if role == 'ADMINISTRATION' %}is-active{% endif %}"
+                            name="role"
+                            value="ADMINISTRATION"
+                            aria-selected="{{ 'true' if role == 'ADMINISTRATION' else 'false' }}"
+                        >
+                            행정 (Administration)
+                        </button>
+                    </form>
+
+
+                    <div class="tbody_style2">
+                        <table class="role-table">
+                            <thead>
+                                <tr>
+                                <th>사용자</th>
+                                <th>부서명</th>
+                                <th>마지막 로그인 시간</th>
+                                <th>상태</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for row in selected_role_user_list %}
+                                <tr>
+                                    <td>{{ row.USER_NAME }}</td>
+                                    <td>{{ row.DEPARTMENT }}</td>
+                                    <td>{{ row.TIME_DIFF }}</td>
+                                    <td>
+                                        <form method="post" action="/manage_role">
+                                            <label class="switch">
+                                                <input
+                                                    type="checkbox"
+                                                    class="status-toggle"
+                                                    data-user-seq="{{ row.USER_SEQ }}"
+                                                    {% if row.IS_ACTIVE == 'Y' %}checked{% endif %}
+                                                >
+                                                <span class="slider"></span>
+                                                <span class="label-text">
+                                                    {% if row.IS_ACTIVE == 'Y' %}활성화{% else %}비활성화{% endif %}
+                                                </span>
+                                            </label>
+                                        </form>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="role-pagination-footer">
+                        <div class="page-info">전체 {{ total_list }}건</div>
+
+                            <div class="pagination-controls">
+
+                                <!-- 이전 -->
+                                <a class="page-btn prev {% if page == 1 %}disabled{% endif %}"
+                                href="{{ url_for('view_manage_role_page', page=page-1, role=role) }}">
+                                    &lt;
+                                </a>
+
+                                <!-- 페이지 번호 -->
+                                {% for p in range(1, total_pages + 1) %}
+                                    <a class="page-btn {% if p == page %}active{% endif %}"
+                                    href="{{ url_for('view_manage_role_page', page=p, role=role) }}">
+                                        {{ p }}
+                                    </a>
+                                {% endfor %}
+
+                                <!-- 다음 -->
+                                <a class="page-btn next {% if page == total_pages %}disabled{% endif %}"
+                                href="{{ url_for('view_manage_role_page', page=page+1, role=role) }}">
+                                    &gt;
+                                </a>
+
+                            </div>
+                            
+                        </div>
+
+                       
+                    </div>
+                {% endif %}
+                </div>
+            {% endif %}
+            
+        
+        </div>
+
+    <!-- ✅ 디버깅: pending_answer_id 값 확인 -->
+    <script>
+    console.log('🔍 pending_answer_id =', {{ pending_answer_id if pending_answer_id else 'null' }});
+    </script>
+
+    {% if pending_answer_id %}
+    <script>
+    // LLM 답변 생성 상태를 주기적으로 확인하는 폴링 로직
+    (function() {
+        const answerId = {{ pending_answer_id }};
+        
+        console.log('🔄 폴링 시작: answer_id=' + answerId);
+        
+        function checkStatus() {
+            console.log('⏰ 상태 확인 중...');
+            fetch(`/check_answer_status/${answerId}`)
+                .then(res => res.json())
+                .then(data => {
+                    console.log('📥 응답:', data);
+                    if (data.status === 'complete') {
+                        // ✅ 완료되면 페이지 새로고침
+                        console.log('✅ LLM 답변 생성 완료, 페이지 새로고침');
+                        window.location.reload();
+                    } else {
+                        // ⏳ 아직 진행 중이면 3초 후 다시 확인
+                        console.log('⏳ LLM 답변 생성 중...');
+                        setTimeout(checkStatus, 3000);
+                    }
+                })
+                .catch(err => {
+                    console.error('❌ Status check failed:', err);
+                    // 에러 시에도 재시도 (네트워크 문제 등)
+                    setTimeout(checkStatus, 3000);
+                });
+        }
+        
+        // 첫 체크는 1초 후 시작
+        setTimeout(checkStatus, 1000);
+    })();
+    </script>
+    {% endif %}
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

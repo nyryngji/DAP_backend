@@ -1,0 +1,774 @@
+/* =================================================
+   [1] 공통 기본 설정 (Reset & Layout)
+================================================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #111827;
+  background: #ffffff;
+  overflow: hidden; /* 스케일링을 위해 기본 스크롤 숨김 */
+}
+
+/* 1440x900 기준 스케일링 래퍼 */
+#viewport {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+#scale-wrapper {
+  width: 1440px;
+  height: 900px;
+  transform-origin: top left;
+  display: flex; /* 앱 컨테이너 정렬 */
+}
+
+.app-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* =================================================
+   [3] 메인 영역 공통 (Main Content)
+   - 즐겨찾기 페이지와 일반 페이지의 레이아웃 분기 처리
+================================================= */
+.main-content {
+  flex: 1;
+  position: relative;
+  background: #ffffff;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* 기본 Center Area (초기화면, 채팅화면용: 절대좌표 중앙 정렬) */
+.center-area {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 화면 정중앙 */
+  width: 900px; /* 고정 너비 */
+  max-height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* [중요] 즐겨찾기 화면일 경우 레이아웃 덮어쓰기 
+   (.fav-container가 있으면 레이아웃 변경) */
+.main-content:has(.fav-container) {
+  padding: 40px 60px;
+  overflow-y: auto; /* 스크롤 허용 */
+}
+
+.main-content:has(.fav-container) .center-area {
+  position: relative; /* 절대좌표 해제 */
+  top: auto; left: auto; transform: none;
+  width: 100%; max-width: 1100px; 
+  margin: 0 auto;
+  display: flex; flex-direction: column; gap: 20px;
+}
+
+
+/* =================================================
+   [4] 초기 화면 전용 (Index Page)
+================================================= */
+
+/* 홈 화면: 사이드바 제외한 영역의 정중앙 배치 */
+#screen-home.center-area {
+  /* 1. 위치 잡기 (부모 main-content 기준 중앙) */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 정확한 정중앙 보정 */
+
+  /* 2. 내부 정렬 및 크기 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 세로 중앙 */
+  align-items: center;     /* 가로 중앙 */
+  
+  width: 100%;
+  max-width: 900px; /* 너무 퍼지지 않게 제한 */
+  height: auto;     /* 내용물 크기만큼만 높이 잡음 */
+  padding: 20px;
+  gap: 20px;
+}
+.hero-icon { text-align: center; margin-bottom: 24px; }
+.hero-icon img { width: 160px; }
+.hero-text { font-size: 15px; color: #6b7280; text-align: center; margin-bottom: 32px; }
+
+/* 검색 박스 */
+.search-box {
+  width: 100%;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px 0 20px;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  margin-bottom: 24px;
+}
+.search-icon { width: 20px; height: 20px; margin-right: 12px; opacity: 0.5; }
+.search-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  height: 100%;
+  background: transparent;
+}
+.search-button {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: none;
+  background: #059669;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.search-button:hover { background: #047857; }
+.search-button img { width: 18px; height: 18px; filter: invert(1); }
+
+/* 하단 검색창 전용 위치 조정 (채팅화면용) */
+.input-area { width: 100%; margin-top: auto; }
+
+/* 추천 칩 */
+.suggestion-area { display: flex; justify-content: center; gap: 8px; margin-bottom: 48px; color: #6b7280; font-size: 13px; align-items: center; flex-wrap: wrap; }
+.suggestion-chip {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  color: #4b5563;
+  font-size: 13px;
+  cursor: pointer;
+}
+.suggestion-chip:hover { border-color: #d1d5db; background: #f9fafb; }
+
+/* 하단 보안 특징 */
+.feature-area { display: flex; justify-content: center; gap: 40px; }
+.feature-item { text-align: center; width: 200px; }
+.feature-icon {
+  width: 48px; height: 48px; margin: 0 auto 12px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%; background: #ecfdf5;
+}
+.feature-title { font-weight: 600; font-size: 14px; margin-bottom: 4px; }
+.feature-desc { font-size: 12px; color: #6b7280; line-height: 1.4; }
+
+
+/* =================================================
+   [5] 채팅/결과 화면 전용 (Chat Page)
+================================================= */
+
+/* 1. 채팅 화면 전체 레이아웃 */
+#screen-chat.center-area {
+  display: none; /* JS 제어용 */
+  flex-direction: column;
+  justify-content: space-between; /* 상단 그룹과 하단 질문창을 양 끝으로 배치 */
+  height: 100%;
+  padding: 40px 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 2. 결과 요약 박스 (상단) */
+.result-summary {
+  width: 60%; 
+  height: 60px;
+  background: #f0fdf4; 
+  border-radius: 12px;
+  margin-left: auto; /* 우측 정렬 */
+  margin-bottom: 24px;
+}
+
+.result-card {
+  position: relative;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 0; /* 내부 패딩 제거 (테이블 꽉 차게) */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  margin-bottom: auto; /* 하단 검색창 밀어내기 */
+}
+
+/* 테이블 스타일 */
+.result-card {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  padding: 1%;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.result-card::-webkit-scrollbar {
+  display: none;
+}
+
+.result-card thead { background-color: #f9fafb; }
+
+.result-card tbody {
+  overflow-y: auto;
+  max-height: 500px;
+}
+
+.result-card th {
+  position: sticky;
+  padding: 14px 16px;
+  font-size: 15px;
+  font-weight: 700;
+  border-bottom: 1px solid #e5e7eb;
+  text-transform: uppercase;
+  background: #31694E;
+  color: white;
+}
+
+.result-card td {
+  padding: 1%;
+  color: #374151;
+  border-bottom: 1px solid #f3f4f6;
+  text-align: center;
+  font-size: 15px;
+}
+
+.result-card tr:last-child td { 
+  border-bottom: none; 
+}
+
+/* 헤더 내부 (텍스트 + 태그 + 아이콘) */
+.th-content { display: flex; align-items: center; gap: 6px; }
+.type-tag {
+  background-color: #e5e7eb;
+  color: #4b5563;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+}
+.sort-icon { width: 12px; height: 12px; color: #9ca3af; margin-left: 2px; }
+
+/* 카드 하단 버튼 영역 */
+.result-card-footer {
+  padding: 12px 16px;
+  border-top: 1px solid #f3f4f6;
+  display: flex;
+  justify-content: flex-end;
+}
+.detail-button {
+  display: flex; align-items: center; gap: 6px;
+  padding: 8px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background: #ffffff;
+  font-size: 12px; font-weight: 600; color: #111827;
+  cursor: pointer;
+}
+.detail-button svg { width: 14px; height: 14px; }
+
+/* 4. 새로고침 아이콘 (표 바깥 우측 하단) */
+.result-refresh {
+  position: absolute;
+  right: -10px;    /* 표 오른쪽 경계 살짝 바깥 */
+  bottom: -40px;   /* 표 아래쪽 경계 바깥 */
+  color: #9ca3af;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.result-refresh svg {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.result-refresh:hover svg {
+  color: #059669; /* 호버 시 초록색 강조 */
+  transform: rotate(180deg); /* 회전 효과 */
+}
+
+/* 5. 질문창 영역 (하단 고정) */
+.input-area {
+  width: 100%;
+  margin-top: auto; /* 남은 공간을 모두 차지하여 아래로 밀어냄 */
+}
+
+
+/* =================================================
+   [6] 즐겨찾기 화면 전용 (Favorites Page)
+================================================= */
+.fav-header {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 8px;
+}
+.page-title { font-size: 24px; font-weight: 700; color: #111827; margin: 0; }
+
+.action-btn {
+  display: flex; align-items: center; gap: 6px;
+  padding: 8px 16px; border: 1px solid #e5e7eb; border-radius: 6px;
+  background: #fff; font-size: 13px; font-weight: 600; color: #374151; cursor: pointer;
+}
+.action-btn:hover { background: #f9fafb; }
+.action-btn.delete { color: #ef4444; border-color: #fef2f2; }
+.action-btn.delete:hover { background: #fef2f2; }
+
+/* 즐겨찾기 테이블 */
+.fav-container {
+  width: 100%; min-height: 600px;
+  border: 1px solid #e5e7eb; border-radius: 8px;
+  background: #fff; display: flex; flex-direction: column;
+}
+.fav-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 14px; }
+.fav-table thead th {
+  background-color: #f9fafb; padding: 14px 16px;
+  color: #4b5563; font-weight: 600; font-size: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+.fav-table tbody td {
+  padding: 16px; border-bottom: 1px solid #f3f4f6;
+  color: #111827; vertical-align: middle;
+}
+.col-check { width: 50px; text-align: center; }
+.col-date { width: 180px; color: #6b7280; font-size: 13px; }
+.content-wrapper { display: flex; align-items: center; padding-left: 3px; }
+.content-wrapper span { font-size: 14px; color: #333; }
+
+/* 페이지네이션 (공통) */
+.pagination-footer {
+  margin-top: auto; padding: 16px 20px;
+  display: flex; justify-content: space-between; align-items: center;
+  border-top: 1px solid #e5e7eb;
+}
+.page-info { font-size: 13px; color: #6b7280; }
+.pagination-controls { display: flex; gap: 4px; }
+.page-btn {
+  min-width: 32px; height: 32px; display: flex; align-items: center; justify-content: center;
+  border: 1px solid #e5e7eb; background: #fff; border-radius: 6px;
+  font-size: 12px; color: #374151; cursor: pointer;
+}
+.page-btn:hover { background: #f3f4f6; }
+
+.page-btn.active, .page-btn.is-active {
+  background: #059669; color: #fff; border-color: #059669;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.action-btn:active { background: #f3f4f6; }
+.action-btn.delete { color: #374151; border-color: #e5e7eb; }
+.action-btn.delete:hover { background: #f9fafb; }
+.action-btn.delete:active { background: #f3f4f6; }
+
+.col-date { width: 260px; color: #6b7280; font-size: 13px; }
+.fav-table th.col-date,
+.fav-table td.col-date {
+  text-align: left;
+  padding-left: 0;
+}
+
+/* =================================================
+   [보완] 화면 전환 제어 (Visibility Control)
+================================================= */
+
+/* 모든 화면 섹션은 기본적으로 숨김 */
+.center-area {
+  display: none; /* JS에서 showScreen 호출 시 flex로 변경 */
+}
+
+/* 활성화된 화면만 표시 */
+.center-area.is-active {
+  display: flex !important;
+}
+
+/* [추가] 즐겨찾기 화면 전용 스타일 보정 
+   기존 :has(.fav-container) 로직을 더 명확하게 클래스 기반으로 보완 */
+.main-content.fav-mode {
+  padding: 40px 60px;
+  overflow-y: auto;
+}
+
+.main-content.fav-mode .center-area {
+  position: relative;
+  top: auto; left: auto; transform: none;
+  width: 100%; max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* =================================================
+   [보완] 테이블 및 카드 레이아웃 디테일
+================================================= */
+.result-card table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* 스크롤바 커스텀 (사이드바 및 메인영역) */
+.recent-section::-webkit-scrollbar,
+.main-content::-webkit-scrollbar {
+  width: 6px;
+}
+.recent-section::-webkit-scrollbar-thumb,
+.main-content::-webkit-scrollbar-thumb {
+  background: #e5e7eb;
+  border-radius: 10px;
+}
+
+/* 테이블 하단 (자세히보기) 버튼 내 아이콘 조절 */
+.detail-button img, 
+.detail-button svg {
+  width: 18px;  /* 아이콘 너비 조절 */
+  height: 18px; /* 아이콘 높이 조절 */
+  object-fit: contain; /* 이미지 비율 유지 */
+  margin-right: 6px;   /* 텍스트와의 간격 (필요 시) */
+  vertical-align: middle; /* 텍스트와 중앙 정렬 */
+}
+
+/* 전송 버튼 내 아이콘도 함께 조절하고 싶다면 */
+.search-button img.send-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* =================================================
+   [7] 팝업 모드 최종 수정 (덮어쓰기용)
+================================================= */
+
+/* 1. 팝업 기본 설정 */
+body.popup-mode {
+    min-width: 800px;
+    background: #ffffff !important;
+    overflow-y: auto !important;
+    height: 100%
+}
+
+/* 2. 레이아웃 초기화 */
+body.popup-mode #viewport,
+body.popup-mode #scale-wrapper,
+body.popup-mode .app-container {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 100vh;
+    transform: none !important;
+    display: block !important;
+    position: static !important;
+}
+body.popup-mode .sidebar { display: none !important; }
+
+/* 3. 메인 콘텐츠 여백 */
+body.popup-mode .main-content {
+    width: 100% !important;
+    padding: 0 !important;
+    display: block !important;
+}
+
+body.popup-mode .main-inner {
+    width: 90%;
+    min-width: 400px;
+    max-width: 850px;
+    margin: auto;
+    overflow: auto;
+    height: 90%;
+    padding: 2% 0;
+}
+
+/* 4. 헤더 정렬 (양쪽 끝으로 배치) */
+
+body.popup-mode .result-header  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+body.popup-mode .result-header h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 20;
+  }
+
+body.popup-mode .header-actions {
+    display: flex;
+    gap: 8px;
+  }
+
+body.popup-mode .header-btn {
+    display: inline-flex;
+    align-items: center;   
+    gap: 6px;
+    height: 40px;
+    padding: 0 14px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+  }
+
+body.popup-mode .header-btn img {
+    width: 14px;
+    height: 14px;
+  }
+
+body.popup-mode .header-btn.close img {
+    background: #ef4444;
+    border-radius: 50%;
+    padding: 2px;
+  }
+
+/* 5. 즐겨찾기 박스 (가로 꽉 차게 & 아이콘 제어) */
+body.popup-mode .favorite-box {
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 12px 16px !important;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+body.popup-mode .favorite-box input {
+    flex: 1;                /* 남은 공간 다 차지하기 */
+    border: none !important;      /* 테두리 제거 */
+    background: transparent !important; /* 배경 투명 */
+    outline: none !important;     /* 클릭 시 파란 테두리 제거 */
+    font-size: 14px;
+    color: #111827;
+    padding: 0;             /* 불필요한 패딩 제거 */
+    margin-left: 8px;       /* 별 아이콘과의 간격 */
+    height: 100%;
+}
+
+body.popup-mode .favorite-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 12px;
+}
+body.popup-mode .favorite-clear {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+    border: none;
+    background: #f3f4f6;
+    color: #6b7280;
+    border-radius: 999px;
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+}
+body.popup-mode .favorite-clear:hover {
+    background: #e5e7eb;
+    color: #374151;
+}
+/* [핵심] 별 아이콘 크기 강제 고정 */
+.star {
+  display: flex;
+  align-items: center;
+}
+
+.star img {
+  width: 24px !important;
+  height: 24px !important;
+  min-width: 24px !important;
+  object-fit: contain;
+}
+
+/* 6. [수정됨] 쿼리바 스타일 (요청하신 회색 박스 스타일 적용) */
+body.popup-mode .query-toggle-bar {
+    width: 100% !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: #f8fafc !important; /* 회색 배경 */
+    border: 1px solid #e5e7eb !important;
+    border-radius: 8px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #4b5563;
+}
+/* 쿼리 타이틀 볼드 처리 (선택 사항) */
+body.popup-mode .query-toggle-title { font-weight: 500 !important; color: #4b5563; }
+
+/* 쿼리 내용 박스 */
+body.popup-mode .query-content-bar {
+    width: 100% !important;
+    box-sizing: border-box;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 8px !important;
+    padding: 20px !important;
+    background: #ffffff !important;
+    margin-bottom: 20px !important;
+}
+body.popup-mode .query-content-bar pre {
+    margin: 0;
+    font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+    font-size: 13px;
+    color: #4b5563;
+    white-space: pre-wrap;
+    line-height: 1.6;
+}
+body.popup-mode #queryToggleIcon { width: 14px !important; height: 14px !important; opacity: 0.5; transition: transform 0.2s ease; }
+
+/* =================================================
+   [7] 하단 그래프 & 로직 섹션 (Popup 전용 스타일)
+================================================= */
+
+/* 1. 전체 레이아웃 (좌측 그래프 vs 우측 로직) */
+body.popup-mode .graph-condition-wrap {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 24px;
+    min-height: 350px;
+}
+
+/* 2. 섹션 제목 공통 */
+body.popup-mode .section-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #111827;
+    margin-top: 0 !important;
+    line-height: 1.5; /* 라인 높이 일치 */
+}
+
+/* 3. [수정됨] 그래프 섹션 스타일 */
+body.popup-mode .graph-section {
+    width: 100%;
+    padding-top: 15px !important;
+    box-sizing: border-box;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 2%;
+}
+
+/* 셀렉트 박스 3개 가로 정렬 */
+body.popup-mode .graph-select-row {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 12px !important;
+    margin-bottom: 12px !important;
+}
+
+/* 개별 셀렉트 그룹 */
+body.popup-mode .graph-select {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+body.popup-mode .graph-select label {
+    font-size: 12px;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+/* 셀렉트 박스 디자인 */
+body.popup-mode .graph-select select {
+    width: 100%;
+    height: 40px !important;
+    padding: 0 30px 0 12px !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 6px !important;
+    background-color: #f8fafc !important;
+    font-size: 13px !important;
+    color: #374151;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23374151' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 12px center !important;
+    background-size: 12px 12px !important;
+    cursor: pointer;
+}
+
+.graph-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-title {
+  align-items: center;
+}
+
+
+/* 그래프 캔버스 */
+body.popup-mode .graph-canvas {
+    width: 100%;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 12px !important;
+    background: #ffffff;
+}
+
+/* 4. [수정됨] 로직 섹션 스타일 */
+body.popup-mode .logic-section {
+    width: 22%;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 12px !important;
+    /* 상단 여백(24px)을 그래프 섹션과 통일 */
+    padding: 24px 20px !important; 
+    background: #ffffff !important;
+    background-color: #f3f4f6;
+}
+
+/* 로직 리스트 */
+body.popup-mode .logic-list {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+body.popup-mode .logic-list li {
+    display: flex !important;
+    align-items: center !important;
+    margin-bottom: 12px !important;
+    font-size: 13px !important;
+    color: #374151;
+}
+body.popup-mode .logic-list img {
+    width: 18px !important;
+    height: 18px !important;
+    margin-right: 8px !important;
+    flex-shrink: 0;
+}
+
+.js-plotly-plot .gtitle {
+    font-weight: 700 !important;
+}

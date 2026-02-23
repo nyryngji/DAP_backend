@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- =========================
+       공통 스타일 (수정 금지)
+       - 사이드바
+       - 배경색
+       - 전체 비율
+       - 폰트 / 버튼 규격
+  ========================= -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='chat.css') }}" />
+
+  <title>DAP - Data Access Platform</title>
+</head>
+<body>
+<!-- =================================================
+     [공통] 전체 화면 기준 뷰포트 (수정 금지)
+================================================== -->
+<div id="viewport">
+
+  <!-- =================================================
+       [공통] 기준 해상도 스케일 래퍼 (수정 금지)
+       - 기준 해상도: 1440 x 900
+       - 화면 크기에 따라 자동 scale
+  ================================================= -->
+  <div id="scale-wrapper">
+
+    <!-- =================================================
+         [공통] 앱 전체 레이아웃 (수정 금지)
+         - 좌측 사이드바
+         - 우측 메인 영역
+    ================================================= -->
+    <div class="app-container">
+
+      <!-- =====================
+           [공통] 사이드바 (수정 금지)
+           - 로고
+           - 메뉴
+           - 최근 기록
+           - 사용자 정보
+      ====================== -->
+      <aside class="sidebar">
+
+        <!-- 로고 -->
+        <div class="logo-area">
+          <img src="{{ url_for('static', filename='image/dap_only_logo.png') }}" alt="DAP 로고" />
+          <div class="logo-text">
+            <div class="logo-title">DAP</div>
+            <div class="logo-subtitle">Data Access Platform</div>
+          </div>
+        </div>
+
+        <!-- 메뉴 -->
+        <div class="menu-section">
+          <div class="menu-title">메뉴</div>
+
+          <div class="menu-item active">
+            <img src="https://img.icons8.com/?size=100&id=TA4QF-Vb1AiX&format=png&color=000000" />
+            <span>새로운 채팅</span>
+          </div>
+
+          <div class="menu-item">
+            <img src="https://img.icons8.com/?size=100&id=43879&format=png&color=000000" />
+            <span>즐겨찾기</span>
+          </div>
+        </div>
+
+        <!-- 최근 기록 -->
+        <div class="recent-section">
+          <div class="menu-title">최근 기록</div>
+
+          <div class="recent-item">
+            <img src="https://img.icons8.com/?size=100&id=20106&format=png&color=000000" />
+            <span>지난 달 ICU 재원일 수</span>
+          </div>
+
+          <div class="recent-item">
+            <img src="https://img.icons8.com/?size=100&id=20106&format=png&color=000000" />
+            <span>...</span>
+          </div>
+        </div>
+
+        <!-- 사용자 정보 -->
+        <div class="user-section">
+          <!-- 의사인 경우 -->
+          {% if user_info.ADMIN_ROLE == 'CLINICAL' %} 
+            <img src="https://img.icons8.com/?size=100&id=9TmDmAtqEdVZ&format=png&color=000000"/>
+            <div class="user-text">
+              <div class="user-name">{{ user_info.USER_NAME }} 의사</div>
+              <div class="user-role">{{ user_info.ADMIN_ROLE }} Admin</div>
+            </div>
+          
+          <!-- 행정직인 경우 -->
+          {% elif user_info.ADMIN_ROLE == 'ADMINISTRATION' %}
+            <img src="https://img.icons8.com/?size=100&id=aFxfm4qI75vj&format=png&color=000000"/>
+            <div class="user-text">
+              <div class="user-name">{{ user_info.USER_NAME }} 행정직</div>
+              <div class="user-role">{{ user_info.ADMIN_ROLE }} Admin</div>
+            </div>
+          
+          <!-- 연구직인 경우 -->
+          {% else %}
+            <img src="https://img.icons8.com/?size=100&id=Jy6voCYpThrR&format=png&color=000000"/>
+            <div class="user-text">
+              <div class="user-name">{{ user_info.USER_NAME }} 연구원</div>
+              <div class="user-role">{{ user_info.ADMIN_ROLE }} Admin</div>
+            </div>
+          {% endif %}
+
+          <div class="logout-wrapper">
+            <a href="{{ url_for('logout') }}" >
+              <img
+              class="logout-icon"
+              src="https://img.icons8.com/?size=100&id=vGj0AluRnTSa&format=png&color=000000"
+              />
+            </a>
+          </div>
+        </div>
+
+      </aside>
+
+
+      <main class="main-content">
+        <div class="center-area">
+
+          <div class="result-summary"></div>
+
+          <div class="result-card">
+            <table class="result-table">
+              <thead>
+                <tr>
+                  <th>
+                    <div class="th-content">
+                      PATIENT ID <span class="type-tag">INT</span>
+                      <svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-content">
+                      ADMISSION DATE <span class="type-tag">DATE</span>
+                      <svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-content">
+                      DIAGNOSIS CODE <span class="type-tag">STR</span>
+                      <svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-content">
+                      LOS (DAYS) <span class="type-tag">INT</span>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-content">
+                      ATTENDING PHYSICIAN <span class="type-tag">STR</span>
+                      <svg class="sort-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>P-89231</td>
+                  <td>2023-01-14</td>
+                  <td>I50.9</td>
+                  <td>4</td>
+                  <td style="font-style: italic;">Dr. Sarah Chen</td>
+                </tr>
+                <tr>
+                  <td>P-89244</td>
+                  <td>2023-02-01</td>
+                  <td></td> <td>7</td>
+                  <td style="font-style: italic;">Dr. James Wilson</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="result-card-footer">
+              <button class="detail-button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                자세히보기
+              </button>
+            </div>
+
+            <div class="result-refresh">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 4v6h-6"></path><path d="M1 20v-6h6"></path><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+            </div>
+          </div>
+
+          <div class="input-area">
+            <div class="search-box">
+              <img class="search-icon" src="https://img.icons8.com/?size=100&id=7695&format=png&color=94A3BB" />
+              <input type="text" placeholder="궁금한 것을 질문하세요" />
+              <button class="search-button">
+                <img class="send-icon" src="https://img.icons8.com/?size=100&id=deb0U2CNzMat&format=png&color=FFFFFF" alt="전송" />
+              </button>
+            </div>
+          </div>
+
+        </div> </main>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  const BASE_WIDTH = 1440;
+  const BASE_HEIGHT = 900;
+
+  function applyScale() {
+    const scaleX = window.innerWidth / BASE_WIDTH;
+    const scaleY = window.innerHeight / BASE_HEIGHT;
+    const scale = Math.min(scaleX, scaleY);
+
+    document.getElementById("scale-wrapper").style.transform =
+      `scale(${scale})`;
+  }
+
+  window.addEventListener("resize", applyScale);
+  applyScale();
+
+  const sidebarButtons = document.querySelectorAll(
+    ".menu-section .menu-item, .recent-section .recent-item"
+  );
+  sidebarButtons.forEach((div) => {
+    div.addEventListener("click", () => {
+      sidebarButtons.forEach((item) => item.classList.remove("active"));
+      div.classList.add("active");
+    });
+  });
+
+  const pageButtons = document.querySelectorAll(".pagination .page-btn");
+  pageButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      pageButtons.forEach((item) => {
+        item.classList.remove("is-active");
+        item.removeAttribute("aria-current");
+      });
+      btn.classList.add("is-active");
+      btn.setAttribute("aria-current", "page");
+    });
+  });
+
+</script>
+
+</body>
+</html>
