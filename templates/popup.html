@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='popup.css') }}" />
   <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
   <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
   <title>DAP - 상세 결과 보기</title>
@@ -136,20 +136,7 @@
 
       <div class="logic-section">
         <h3 class="section-title">조건 및 로직</h3>
-        <ul class="logic-list">
-          <li>
-            <img src="https://img.icons8.com/color/48/checked--v1.png" alt="check" />
-            <span>ICU stay 기준 사망률</span>
-          </li>
-          <li>
-            <img src="https://img.icons8.com/color/48/checked--v1.png" alt="check" />
-            <span>최근 1년 기준</span>
-          </li>
-          <li>
-            <img src="https://img.icons8.com/color/48/checked--v1.png" alt="check" />
-            <span>분기별 비교</span>
-          </li>
-        </ul>
+        {{ llm_sql_logic_inst }}
       </div>
     </div> 
   </div>

@@ -2,15 +2,14 @@ from flask import Flask, render_template, request, redirect, url_for, flash, ses
 import oracledb
 from dotenv import load_dotenv
 import os
-from db_func import *
+from func import *
+from llm import *
 import uuid
 import math
 import json
 import time
-from llm import llm_answer, generate_medical_sql_explanation_json, extract_tables
 import pandas as pd
 import threading
-from csv_to_file import *
 
 app = Flask(__name__)
 app.secret_key = 'super-secret-key'
@@ -83,31 +82,25 @@ def get_pool_by_role(role):
         raise Exception("Invalid role")
 
 def generate_answer(human_question, answer_id, USER_SEQ, chat_session_id, user_role):
-
-    role_pool = None
-    role_conn = None
-    role_cursor = None
-
     try:
         user_name, role_pool = get_pool_by_role(user_role)
-        role_conn = role_pool.acquire()
-        role_cursor = role_conn.cursor()
 
         start_time = time.perf_counter()
 
         # ✅ LLM 호출
-        sql, sql_json, bind_query, bind_dict = llm_answer(
-            human_question, cur
+        sql, bind_query, bind_dict, llm_natural_answer = llm_answer(
+            human_question
         )
-
+        print(user_name, user_role)
         print(f'현재 생성된 쿼리 : {bind_query, bind_dict}')
 
         # 🔥 권한 체크 (하나라도 없으면 즉시 종료)
         selected_tables = extract_tables(sql)
 
+        yes_privileges = privilege_validation(cur,user_name)
+
         for table_name in selected_tables:
-            if privilege_validation(cur, table_name, user_name) == 'NO_PRIVILEGE':
-                
+            if table_name not in yes_privileges:
                 update_llm_answer(
                     cur,
                     conn,
@@ -132,12 +125,6 @@ def generate_answer(human_question, answer_id, USER_SEQ, chat_session_id, user_r
             bind_query,
             bind_json,
             elapsed_seconds
-        )
-
-        llm_natural_answer = generate_medical_sql_explanation_json(
-            human_question,
-            sql_json,
-            execution_summary=None
         )
         
         # ✅ 정상 응답
@@ -164,15 +151,15 @@ def generate_answer(human_question, answer_id, USER_SEQ, chat_session_id, user_r
             )
             conn.commit()
 
-    finally:
-        if role_cursor:
-            role_cursor.close()
-        if role_conn:
-            role_conn.close()
-        if cur:
-            cur.close()
-        if conn:
-            conn.close()
+    # finally:
+    #     if role_cursor:
+    #         role_cursor.close()
+    #     if role_conn:
+    #         role_conn.close()
+    #     if cur:
+    #         cur.close()
+    #     if conn:
+    #         conn.close()
 
 
 # 로그인 화면 1
@@ -270,8 +257,9 @@ def view_already_chat_page(chat_session_id):
                 conn.commit()
 
             finally:
-                cur.close()
-                conn.close()
+                # cur.close()
+                # conn.close()
+                pass
 
             threading.Thread(
                 target=generate_answer,
@@ -336,10 +324,12 @@ def view_already_chat_page(chat_session_id):
                 if sql_info:
                     bind_values = json.loads(sql_info["BIND_VALUES"]) if sql_info.get("BIND_VALUES") else {}
                     table_info = make_table_from_sql(conn, sql_info["SQL_TEXT"], bind_values, limit=5)
+                    table_info = auto_mask_mimic_partial(table_info)
                     block["table"] = table_info
                 
     finally:
-        conn.close()
+        # conn.close()
+        pass
 
     pending_answer_id = session.pop('pending_answer_id', None)
 
@@ -412,6 +402,7 @@ def popup(answer_id):
     # 2️⃣ SQL 실행
     try:
         table_info = make_table_from_sql(conn, original_sql, bind_values, limit=20)
+        table_info = auto_mask_mimic_partial(table_info)
     except Exception as e:
         return f"SQL 실행 실패: {str(e)}", 500
 
@@ -419,6 +410,7 @@ def popup(answer_id):
 
     # 3️⃣ 즐겨찾기 조회
     favorite_result = isit_favorite(conn, answer_id)
+    llm_sql_logic_inst = load_llm_answer(conn, answer_id)
 
     if favorite_result:
         update_favorite_title = favorite_result['IS_FAVORITE']
@@ -426,7 +418,7 @@ def popup(answer_id):
 
     # 4️⃣ POST 처리
     if request.method == 'POST':
-
+        
         favorite_title = request.form.get('favorite_title')
         x_axis = request.form.get("x_axis")
         y_axis = request.form.get("y_axis")
@@ -466,7 +458,8 @@ def popup(answer_id):
         update_favorite_title=update_favorite_title,
         favorite_result=favorite_result,
         graph_html=graph_html,
-        graph_error=graph_error
+        graph_error=graph_error,
+        llm_sql_logic_inst = llm_sql_logic_inst
     )
 
 @app.route("/popup/<int:answer_id>/download")
